@@ -6,7 +6,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package jots
+ * @package miningtown
  * 
  * @since 1.0.0
  */
@@ -21,21 +21,21 @@
 
 <body <?php body_class(); ?>>
 <div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'jots' ); ?></a>
+	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'miningtown' ); ?></a>
 
 		<header id="masthead" class="site-header responsive-max-width">
 
 			<?php get_template_part( 'template-parts/header/site', 'branding' ); ?>
 
 			<?php if ( has_nav_menu( 'menu-1' ) ) : ?>
-				<nav id="site-navigation" class="main-navigation" aria-label="<?php esc_attr_e( 'Main Navigation', 'jots' ); ?>">
+				<nav id="site-navigation" class="main-navigation" aria-label="<?php esc_attr_e( 'Main Navigation', 'miningtown' ); ?>">
 					<input type="checkbox" role="button" aria-haspopup="true" id="toggle" class="hide-visually">
 					<label for="toggle" id="toggle-menu" class="button">
-						<?php _e( 'Menu', 'jots' ); ?>
+						<?php _e( 'Menu', 'miningtown' ); ?>
 						<span class="dropdown-icon open">+</span>
 						<span class="dropdown-icon close">&times;</span>
-						<span class="hide-visually expanded-text"><?php _e( 'expanded', 'jots' ); ?></span>
-						<span class="hide-visually collapsed-text"><?php _e( 'collapsed', 'jots' ); ?></span>
+						<span class="hide-visually expanded-text"><?php _e( 'expanded', 'miningtown' ); ?></span>
+						<span class="hide-visually collapsed-text"><?php _e( 'collapsed', 'miningtown' ); ?></span>
 					</label>
 					<?php
 					wp_nav_menu(
@@ -50,7 +50,7 @@
 			<?php endif; ?>
 
 			<?php if ( has_nav_menu( 'social' ) ) : ?>
-				<nav class="social-navigation" aria-label="<?php esc_attr_e( 'Social Links Menu', 'jots' ); ?>">
+				<nav class="social-navigation" aria-label="<?php esc_attr_e( 'Social Links Menu', 'miningtown' ); ?>">
 					<?php
 					wp_nav_menu(
 						array(

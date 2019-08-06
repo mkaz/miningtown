@@ -2,7 +2,7 @@
 /**
  * SVG Icons class
  *
- * @package jots
+ * @package miningtown
  * 
  * @since 1.0.0
  */

@@ -2,7 +2,7 @@
 /**
  * Displays header site branding
  *
- * @package jots
+ * @package miningtown
  * 
  * @since 1.0.0
  */

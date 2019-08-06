@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
  *
- * @package jots
+ * @package miningtown
  * 
  * @since 1.0.0
  */

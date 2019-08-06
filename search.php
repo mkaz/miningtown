@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#search-result
  *
- * @package jots
+ * @package miningtown
  * 
  * @since 1.0.0
  */
@@ -22,7 +22,7 @@ get_header();
 				printf(
 					/* translators: 1: search result title. 2: search term. */
 					'<h1 class="page-title">%1$s <span class="page-description search-term">%2$s</span></h1>',
-					__( 'Search results for:', 'jots' ),
+					__( 'Search results for:', 'miningtown' ),
 					get_search_query()
 				);
 				?>

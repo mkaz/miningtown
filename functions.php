@@ -4,25 +4,9 @@
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
- * @package jots
+ * @package miningtown
  * @since 1.0.0
  */
-
-add_action( 'init', function() {
-
-	wp_register_style(
-		'jots-style-variables',
-		get_template_directory_uri() . 'style-variables.css',
-		array()
-	);
-
-	wp_register_style(
-		'jots-style',
-		get_stylesheet_uri(),
-		array( 'jots-style-variables' )
-	);
-
-} );
 
 add_action( 'after_setup_theme', function() {
 	
@@ -33,26 +17,26 @@ add_action( 'after_setup_theme', function() {
 		'editor-font-sizes',
 		array(
 			array(
-				'name'      => __( 'Small', 'jots' ),
-				'shortName' => __( 'S', 'jots' ),
+				'name'      => __( 'Small', 'miningtown' ),
+				'shortName' => __( 'S', 'miningtown' ),
 				'size'      => 19.5,
 				'slug'      => 'small',
 			),
 			array(
-				'name'      => __( 'Normal', 'jots' ),
-				'shortName' => __( 'M', 'jots' ),
+				'name'      => __( 'Normal', 'miningtown' ),
+				'shortName' => __( 'M', 'miningtown' ),
 				'size'      => 22,
 				'slug'      => 'normal',
 			),
 			array(
-				'name'      => __( 'Large', 'jots' ),
-				'shortName' => __( 'L', 'jots' ),
+				'name'      => __( 'Large', 'miningtown' ),
+				'shortName' => __( 'L', 'miningtown' ),
 				'size'      => 36.5,
 				'slug'      => 'large',
 			),
 			array(
-				'name'      => __( 'Huge', 'jots' ),
-				'shortName' => __( 'XL', 'jots' ),
+				'name'      => __( 'Huge', 'miningtown' ),
+				'shortName' => __( 'XL', 'miningtown' ),
 				'size'      => 49.5,
 				'slug'      => 'huge',
 			),
@@ -63,32 +47,32 @@ add_action( 'after_setup_theme', function() {
 		'editor-color-palette',
 		array(
 			array(
-				'name'  => __( 'Primary', 'jots' ),
+				'name'  => __( 'Primary', 'miningtown' ),
 				'slug'  => 'primary',
 				'color' => '#0000FF',
 			),
 			array(
-				'name'  => __( 'Secondary', 'jots' ),
+				'name'  => __( 'Secondary', 'miningtown' ),
 				'slug'  => 'secondary',
 				'color' => '#FF0000',
 			),
 			array(
-				'name'  => __( 'Dark Gray', 'jots' ),
+				'name'  => __( 'Dark Gray', 'miningtown' ),
 				'slug'  => 'foreground-dark',
 				'color' => '#111111',
 			),
 			array(
-				'name'  => __( 'Gray', 'jots' ),
+				'name'  => __( 'Gray', 'miningtown' ),
 				'slug'  => 'foreground',
 				'color' => '#444444',
 			),
 			array(
-				'name'  => __( 'Light Gray', 'jots' ),
+				'name'  => __( 'Light Gray', 'miningtown' ),
 				'slug'  => 'foreground-light',
 				'color' => '#767676',
 			),
 			array(
-				'name'  => __( 'White', 'jots' ),
+				'name'  => __( 'White', 'miningtown' ),
 				'slug'  => 'background',
 				'color' => '#FFFFFF',
 			),
@@ -96,6 +80,27 @@ add_action( 'after_setup_theme', function() {
 	);
 } );
 
+
+/**
+ * Add Google webfonts, if necessary
+ *
+ * - See: http://themeshaper.com/2014/08/13/how-to-add-google-fonts-to-wordpress-themes/
+ */
+function miningtown_fonts_url() {
+	
+	$font_families = array();
+	$font_families[] = 'PT+Serif:400,700';
+	$font_families[] = 'Roboto+Condensed:400,700';
+
+	$query_args = array(
+		'family' => implode( '|', $font_families ),
+		'subset' => 'latin,latin-ext',
+	);
+
+	$fonts_url = add_query_arg( $query_args, 'https://fonts.googleapis.com/css' );
+
+	return esc_url_raw( $fonts_url );
+}
 
 
 /**
@@ -117,5 +122,18 @@ add_action( 'after_setup_theme', function() {
  * Enqueue scripts and styles.
  */
 add_action( 'wp_enqueue_scripts', function() {
-	wp_enqueue_style( 'jots-style' );
+	
+	// enqueue Google fonts, if necessary
+	wp_enqueue_style( 'miningtown-fonts', miningtown_fonts_url(), array(), null );
+
+	wp_enqueue_style( 'miningtown-style', get_stylesheet_uri(), array() );
+} );
+
+
+/**
+ * Enqueue theme styles for the block editor.
+ */
+add_action( 'enqueue_block_editor_assets', function() {
+	// Enqueue Google fonts in the editor, if necessary
+	wp_enqueue_style( 'miningtown-editor-fonts', miningtown_fonts_url(), array(), null );
 } );

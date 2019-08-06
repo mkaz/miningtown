@@ -4,7 +4,7 @@
  *
  * This file is centrally included from `wp-content/mu-plugins/wpcom-theme-compat.php`.
  *
- * @package Jots
+ * @package MiningTown
  */
 
 /**
@@ -40,8 +40,8 @@ function varia_wpcom_customize_update( $wp_customize ) {
 	) );
 
 	$wp_customize->add_control( 'hide_front_page_title', array(
-		'label'		  => esc_html__( 'Hide Homepage Title', 'jots' ),
-		'description' => esc_html__( 'Check to hide the page title, if your homepage is set to display a static page.', 'jots' ),
+		'label'		  => esc_html__( 'Hide Homepage Title', 'miningtown' ),
+		'description' => esc_html__( 'Check to hide the page title, if your homepage is set to display a static page.', 'miningtown' ),
 		'section'	  => 'static_front_page',
 		'priority'	  => 10,
 		'type'		  => 'checkbox',
@@ -78,7 +78,7 @@ add_action( 'customize_preview_init', 'varia_wpcom_customize_preview_js' );
  * Loads after style.css so we can add overrides.
  */
 function varia_wpcom_scripts() {
-	wp_enqueue_style( 'jots-wpcom-style', get_template_directory_uri() . '/inc/style-wpcom.css', array( 'jots-style' ), '20181218' );
+	wp_enqueue_style( 'miningtown-wpcom-style', get_template_directory_uri() . '/inc/style-wpcom.css', array( 'miningtown-style' ), '20181218' );
 }
 add_action( 'wp_enqueue_scripts', 'varia_wpcom_scripts' );
 

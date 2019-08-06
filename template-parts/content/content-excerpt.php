@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package jots
+ * @package miningtown
  * 
  * @since 1.0.0
  */
@@ -15,7 +15,7 @@
 	<header class="entry-header responsive-max-width">
 		<?php
 		if ( is_sticky() && is_home() && ! is_paged() ) {
-			printf( '<span class="sticky-post">%s</span>', _x( 'Featured', 'post', 'jots' ) );
+			printf( '<span class="sticky-post">%s</span>', _x( 'Featured', 'post', 'miningtown' ) );
 		}
 		the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' );
 		?>

@@ -2,7 +2,7 @@
 /**
  * Displays the post header
  *
- * @package jots
+ * @package miningtown
  * 
  * @since 1.0.0
  */
