@@ -30,7 +30,7 @@ get_header();
 			}
 
 			// Previous/next page navigation.
-			varia_the_posts_navigation();
+			miningtown_the_posts_navigation();
 
 		} else {
 

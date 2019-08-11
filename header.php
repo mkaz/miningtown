@@ -23,9 +23,22 @@
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'miningtown' ); ?></a>
 
-		<header id="masthead" class="site-header responsive-max-width">
+		<header id="masthead" class="site-header">
 
-			<?php get_template_part( 'template-parts/header/site', 'branding' ); ?>
+			<div class="site-branding">
+
+				<?php if ( has_custom_logo() ) : ?>
+					<div class="site-logo"><?php the_custom_logo(); ?></div>
+				<?php endif; ?>
+				<?php $blog_info = get_bloginfo( 'name' ); ?>
+				<?php if ( ! empty( $blog_info ) ) : ?>
+					<?php if ( is_front_page() && is_home() ) : ?>
+						<h3 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h3>
+					<?php else : ?>
+						<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
+					<?php endif; ?>
+				<?php endif; ?>
+			</div>
 
 			<?php if ( has_nav_menu( 'menu-1' ) ) : ?>
 				<nav id="site-navigation" class="main-navigation" aria-label="<?php esc_attr_e( 'Main Navigation', 'miningtown' ); ?>">
@@ -46,25 +59,9 @@
 						)
 					);
 					?>
-				</nav><!-- #site-navigation -->
+				</nav>
 			<?php endif; ?>
 
-			<?php if ( has_nav_menu( 'social' ) ) : ?>
-				<nav class="social-navigation" aria-label="<?php esc_attr_e( 'Social Links Menu', 'miningtown' ); ?>">
-					<?php
-					wp_nav_menu(
-						array(
-							'theme_location' => 'social',
-							'menu_class'     => 'social-links-menu',
-							'link_before'    => '<span class="screen-reader-text">',
-							'link_after'     => '</span>' . varia_get_icon_svg( 'link' ),
-							'depth'          => 1,
-						)
-					);
-					?>
-				</nav><!-- .social-navigation -->
-			<?php endif; ?>
-
-		</header><!-- #masthead -->
+		</header>
 
 	<div id="content" class="site-content">

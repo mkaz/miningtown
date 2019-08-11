@@ -87,20 +87,21 @@ add_action( 'after_setup_theme', function() {
  * - See: http://themeshaper.com/2014/08/13/how-to-add-google-fonts-to-wordpress-themes/
  */
 function miningtown_fonts_url() {
-	
+	       
 	$font_families = array();
 	$font_families[] = 'PT+Serif:400,700';
 	$font_families[] = 'Roboto+Condensed:400,700';
 
 	$query_args = array(
-		'family' => implode( '|', $font_families ),
-		'subset' => 'latin,latin-ext',
+			'family' => implode( '|', $font_families ),
+			'subset' => 'latin,latin-ext',
 	);
 
 	$fonts_url = add_query_arg( $query_args, 'https://fonts.googleapis.com/css' );
 
 	return esc_url_raw( $fonts_url );
 }
+	
 
 
 /**
@@ -111,10 +112,10 @@ function miningtown_fonts_url() {
  * @global int $content_width Content width.
  */
 add_action( 'after_setup_theme', function() {
-	// This variable is intended to be overruled from themes.
+	// This miningtownble is intended to be overruled from themes.
 	// Open WPCS issue: {@link https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards/issues/1043}.
 	// phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedVariableFound
-	$GLOBALS['content_width'] = apply_filters( 'jots_content_width', 640 );
+	$GLOBALS['content_width'] = apply_filters( 'miningtown_content_width', 640 );
 }, 0 );
 
 
@@ -122,18 +123,32 @@ add_action( 'after_setup_theme', function() {
  * Enqueue scripts and styles.
  */
 add_action( 'wp_enqueue_scripts', function() {
+    // enqueue Google fonts, if necessary
+    wp_enqueue_style( 'miningtown-fonts', miningtown_fonts_url(), array(), null );
 	
-	// enqueue Google fonts, if necessary
-	wp_enqueue_style( 'miningtown-fonts', miningtown_fonts_url(), array(), null );
+	wp_enqueue_style(
+		'miningtown-style',
+		get_stylesheet_uri(),
+		array(),
+		filemtime( get_stylesheet_directory() . '/style.css' )
+	);
 
-	wp_enqueue_style( 'miningtown-style', get_stylesheet_uri(), array() );
 } );
 
 
 /**
- * Enqueue theme styles for the block editor.
+ * Changes comment form default fields.
  */
-add_action( 'enqueue_block_editor_assets', function() {
-	// Enqueue Google fonts in the editor, if necessary
-	wp_enqueue_style( 'miningtown-editor-fonts', miningtown_fonts_url(), array(), null );
+add_filter( 'comment_form_defaults', function( $defaults ) {
+	$comment_field = $defaults['comment_field'];
+
+	// Adjust height of comment form.
+	$defaults['comment_field'] = preg_replace( '/rows="\d+"/', 'rows="5"', $comment_field );
+	$defaults['title_reply'] = __( 'Add Comment' );
+	$defaults['label_submit'] = __( 'Submit' );
+
+	return $defaults;
 } );
+
+require get_template_directory() . '/inc/class-varia-svg-icons.php';
+require get_template_directory() . '/inc/template-tags.php';

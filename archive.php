@@ -39,7 +39,7 @@ get_header();
 			endwhile;
 
 			// Previous/next page navigation.
-			varia_the_posts_navigation();
+			miningtown_the_posts_navigation();
 
 			// If no content, include the "No posts found" template.
 		else :

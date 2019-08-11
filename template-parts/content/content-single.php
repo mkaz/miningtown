@@ -17,12 +17,10 @@
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 		<?php if ( ! is_page() ) : ?>
 		<div class="entry-meta">
-			<?php varia_entry_meta(); ?>
+			<?php miningtown_entry_meta(); ?>
 		</div><!-- .meta-info -->
 		<?php endif; ?>
 	</header>
-
-	<?php varia_post_thumbnail(); ?>
 
 	<div class="entry-content responsive-max-width">
 		<?php
@@ -51,7 +49,7 @@
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer responsive-max-width">
-		<?php varia_entry_footer(); ?>
+		<?php miningtown_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
 
 	<?php if ( ! is_singular( 'attachment' ) ) : ?>

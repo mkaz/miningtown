@@ -21,13 +21,11 @@
 		?>
 	</header><!-- .entry-header -->
 
-	<?php varia_post_thumbnail(); ?>
-
 	<div class="entry-content responsive-max-width">
 		<?php the_excerpt(); ?>
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer responsive-max-width">
-		<?php varia_entry_footer(); ?>
+		<?php miningtown_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-${ID} -->
