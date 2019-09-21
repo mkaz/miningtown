@@ -40,8 +40,8 @@ get_header();
 		}
 		?>
 
-		</main><!-- .site-main -->
-	</section><!-- .content-area -->
+		</main>
+	</section>
 
 <?php
 get_footer();
