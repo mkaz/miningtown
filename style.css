@@ -36,17 +36,18 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
     --header-font-family: 'Roboto Condensed', Roboto, Ubuntu, -apple-system, BlinkMacSystemFont, sans-serif;
     --blockquote-font-family: 'Droid Serif', Georgia, serif;
 
-    --h1-size: 2.2rem;
-    --h2-size: 2.0rem;
-    --h3-size: 1.8rem;
-    --h4-size: 1.6rem;
-    --h5-size: 1.4rem;
+    --h1-size: 1.8rem;
+    --h2-size: 1.6rem;
+    --h3-size: 1.4rem;
+    --h4-size: 1.4rem;
+    --h5-size: 1.2rem;
 	--h6-size: 1.2rem;
 	
 	--color-main: #333333;
 	--color-dark: #152934;
 	--color-site-title: red;
     --color-link: red;
+    --color-hover: red;
     --color-accent: #5596e6;
 }
 
@@ -272,7 +273,7 @@ a {
 }
 
 a:hover {
-	color: red;
+	color: var(--color-hover);
 }
 
 button,
@@ -389,16 +390,29 @@ footer {
 	border-bottom: 1px solid #767676;
 }
 
-.site-main,
-.site-footer {
+.site-main {
 	padding: 16px 16px;
 	margin-left: auto;
 	margin-right: auto;
 }
 
+/* make sure padding exists between bottom of page and footer */
+.site-content {
+	margin-bottom: 64px;
+}
+
+.site-footer {
+	position: fixed;
+	width: 100%;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	padding: 8px;
+	background-color: #F0F0F0;
+}
+
 @media only screen and (min-width: 480px) {
-	.site-main,
-	.site-footer {
+	.site-main {
 		padding-top: 32px;
 		padding-right: 0;
 		padding-bottom: 32px;
@@ -429,7 +443,6 @@ footer {
 	margin-bottom: 32px;
 }
 
-.site-footer > *,
 .site-main > article > *,
 .entry-content > *,
 .widget-area > * {
@@ -438,7 +451,6 @@ footer {
 }
 
 @media only screen and (min-width: 480px) {
-	.site-footer > *,
 	.site-main > article > *,
 	.entry-content > *,
 	.widget-area > * {
@@ -447,14 +459,12 @@ footer {
 	}
 }
 
-.site-footer > *:first-child,
 .site-main > article > *:first-child,
 .entry-content > *:first-child,
 .widget-area > *:first-child {
 	margin-top: 0;
 }
 
-.site-footer > *:last-child,
 .site-main > article > *:last-child,
 .entry-content > *:last-child,
 .widget-area > *:last-child {
@@ -1356,7 +1366,7 @@ table th,
 }
 
 .site-title a:hover {
-	color: red;
+	color: var(--color-hover);
 }
 
 .main-navigation {
@@ -1513,7 +1523,7 @@ table th,
 }
 
 .main-navigation a:hover {
-	color: red;
+	color: 	var(--color-hover);
 }
 
 .main-navigation .sub-menu {
@@ -1569,7 +1579,7 @@ table th,
 }
 
 .social-navigation a:hover {
-	color: red;
+	color: var(--color-hover);
 }
 
 .social-navigation svg {
@@ -1577,19 +1587,10 @@ table th,
 	vertical-align: middle;
 }
 
-@media only screen and (min-width: 560px) {
-	.site-footer {
-		align-items: flex-end;
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: space-between;
-	}
-}
-
 .site-info {
 	color: #767676;
 	font-family: var(--system-font);
-	font-size: 0.83333rem;
+	font-size: 0.60rem;
 }
 
 @media only screen and (min-width: 560px) {
@@ -1614,7 +1615,7 @@ table th,
 }
 
 .site-info a:hover {
-	color: red;
+	color: var(--color-hover);
 }
 
 .footer-navigation {
@@ -1667,7 +1668,7 @@ table th,
 }
 
 .footer-navigation .footer-menu a:hover {
-	color: red;
+	color: var(--color-hover);
 }
 
 .entry-meta,
@@ -1709,7 +1710,7 @@ table th,
 .entry-meta a:hover, .entry-meta a:active,
 .entry-footer a:hover,
 .entry-footer a:active {
-	color: red;
+	color: var(--color-hover);
 }
 
 .entry-meta .svg-icon,
@@ -1786,6 +1787,16 @@ table th,
 	font-family: var(--header-font-family);
 	font-size: 1.44rem;
 	font-weight: 600;
+}
+
+.post-navigation .nav-links a {
+	color: var(--color-main);
+	opacity: 0.5;
+}
+
+.post-navigation a:hover {
+	color: var(--color-hover);
+	opacity: 1.0;
 }
 
 .post-navigation .nav-next,
@@ -1937,7 +1948,7 @@ table th,
 }
 
 .comment-meta a:hover, .comment-meta a:active {
-	color: red;
+	color: var(--color-hover);
 }
 
 @media only screen and (min-width: 480px) {

@@ -12,8 +12,7 @@
  */
 
 ?>
-
-	</div><!-- #content -->
+	</div>
 
 	<footer id="colophon" class="site-footer responsive-max-width">
 		<?php get_template_part( 'template-parts/footer/footer', 'widgets' ); ?>
@@ -33,23 +32,16 @@
 					)
 				);
 				?>
-			</nav><!-- .footer-navigation -->
+			</nav>
 		<?php endif; ?>
 		<div class="site-info">
-			<?php $blog_info = get_bloginfo( 'name' ); ?>
-			<?php if ( ! empty( $blog_info ) ) : ?>
-				<a class="site-name" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a><span class="comma">,</span>
-			<?php endif; ?>
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'miningtown' ) ); ?>" class="imprint">
-				<?php
-				/* translators: %s: WordPress. */
-				printf( __( 'proudly powered by %s.', 'miningtown' ), 'WordPress' );
-				?>
+			<a href="https://wordpress.org/" class="imprint">
+				Powered by WordPress
 			</a>
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
+		</div>
+	</footer>
 
-</div><!-- #page -->
+</div>
 
 <?php wp_footer(); ?>
 

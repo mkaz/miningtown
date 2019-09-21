@@ -5,22 +5,30 @@
  /** This is not being loaded by editor styles 
    * so copied and pasted style.css
    */
- :root {
+:root {
     --system-font: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
 
-    --main-font-family: "Ubuntu Mono", "Roboto Mono", "Droid Sans Mono", monospace;
+    --main-font-family: "PT Serif", "Noto Serif", "Ubuntu", monospace;
     --main-font-size: 20px;
 
-    --header-font-family: var(--system-font);
+    --header-font-family: 'Roboto Condensed', Roboto, Ubuntu, -apple-system, BlinkMacSystemFont, sans-serif;
     --blockquote-font-family: 'Droid Serif', Georgia, serif;
 
-    --h1-size: 2.2rem;
-    --h2-size: 2.0rem;
-    --h3-size: 1.8rem;
-    --h4-size: 1.6rem;
-    --h5-size: 1.4rem;
-    --h6-size: 1.2rem;
+    --h1-size: 1.8rem;
+    --h2-size: 1.6rem;
+    --h3-size: 1.4rem;
+    --h4-size: 1.4rem;
+    --h5-size: 1.2rem;
+	--h6-size: 1.2rem;
+	
+	--color-main: #333333;
+	--color-dark: #152934;
+	--color-site-title: red;
+    --color-link: red;
+    --color-hover: red;
+    --color-accent: #5596e6;
 }
+
 
 
 body {
