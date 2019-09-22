@@ -135,6 +135,17 @@ add_action( 'wp_enqueue_scripts', function() {
 
 } );
 
+add_action( 'widgets_init', function() { 
+	register_sidebar( array(
+		'name'          => 'Main Sidebar',
+		'id'            => 'sidebar-main',
+		'before_widget' => '<div>',
+		'after_widget'  => '</div>',
+		'before_title'  => '',
+		'after_title'   => '',
+	) );
+} );
+
 
 /**
  * Changes comment form default fields.

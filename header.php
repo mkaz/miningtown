@@ -23,7 +23,7 @@
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'miningtown' ); ?></a>
 
-		<header id="masthead" class="site-header">
+		<header id="masthead" class="site-header responsive-max-width">
 
 			<div class="site-branding">
 
@@ -32,33 +32,30 @@
 				<?php endif; ?>
 				<?php $blog_info = get_bloginfo( 'name' ); ?>
 				<?php if ( ! empty( $blog_info ) ) : ?>
-					<?php if ( is_front_page() && is_home() ) : ?>
-						<h3 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h3>
-					<?php else : ?>
-						<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-					<?php endif; ?>
+					<h3 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h3>
+					<p class="site-description">
+						<?php esc_html( bloginfo( 'description' ) ); ?>
+					</p>
+					
 				<?php endif; ?>
 			</div>
 
-			<?php if ( has_nav_menu( 'menu-1' ) ) : ?>
+			<?php if ( is_active_sidebar('sidebar-main') ) : ?>
 				<nav id="site-navigation" class="main-navigation" aria-label="<?php esc_attr_e( 'Main Navigation', 'miningtown' ); ?>">
 					<input type="checkbox" role="button" aria-haspopup="true" id="toggle" class="hide-visually">
-					<label for="toggle" id="toggle-menu" class="button">
-						<?php _e( 'Menu', 'miningtown' ); ?>
-						<span class="dropdown-icon open">+</span>
-						<span class="dropdown-icon close">&times;</span>
+					<label for="toggle" id="toggle-menu">
+						<span class="dropdown-icon open" title="Open Menu">
+							<?php echo TwentyNineteen_SVG_Icons::get_svg( 'ui', 'menu', 32 ); ?>
+						</span>
+						<span class="dropdown-icon close" title="Close Menu">
+							<?php echo TwentyNineteen_SVG_Icons::get_svg( 'ui', 'menu-close', 32 ); ?>
+						</span>
 						<span class="hide-visually expanded-text"><?php _e( 'expanded', 'miningtown' ); ?></span>
 						<span class="hide-visually collapsed-text"><?php _e( 'collapsed', 'miningtown' ); ?></span>
 					</label>
-					<?php
-					wp_nav_menu(
-						array(
-							'theme_location' => 'menu-1',
-							'menu_class'     => 'main-menu',
-							'items_wrap'     => '<ul id="%1$s" class="%2$s" aria-label="submenu">%3$s</ul>',
-						)
-					);
-					?>
+					<div id="sidebar-main">
+						<?php dynamic_sidebar( 'sidebar-main' ); ?>
+					</div>
 				</nav>
 			<?php endif; ?>
 
