@@ -30,25 +30,27 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 :root {
     --system-font: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
 
-    --main-font-family: "PT Serif", "Noto Serif", "Ubuntu", monospace;
+    --main-font-family: "PT Serif", "Noto Serif", "Ubuntu", serif;
     --main-font-size: 20px;
+    --code-font-family: "Source Code Pro", Consolas, Inconsolata, Menlo, monospace;
+    --code-font-size: 0.9rem;
 
     --header-font-family: 'Roboto Condensed', Roboto, Ubuntu, -apple-system, BlinkMacSystemFont, sans-serif;
     --blockquote-font-family: 'Droid Serif', Georgia, serif;
 
     --h1-size: 1.8rem;
-    --h2-size: 1.6rem;
-    --h3-size: 1.4rem;
+20    --h3-size: 1.4rem;
     --h4-size: 1.4rem;
     --h5-size: 1.2rem;
 	--h6-size: 1.2rem;
 	
 	--color-main: #333333;
 	--color-dark: #152934;
-	--color-site-title: red;
-    --color-link: red;
+	--color-site-title: #B71C1C;
+    --color-link: #1565C0;
     --color-hover: red;
     --color-accent: #feb24c;
+    --color-code: #8E24AA;
 }
 
 html {
@@ -100,8 +102,10 @@ strong {
 code,
 kbd,
 samp {
-	font-family: monospace, monospace;
-	font-size: 1em;
+	font-family: var(--code-font-family);
+	font-size: var(--code-font-size);
+	color: var(--color-code);
+
 }
 
 small {
@@ -267,7 +271,7 @@ h6 {
  */
 
 a {
-    text-decoration: none;
+	text-decoration: none;
 	background-color: transparent;
 	color: var(--color-link); 
 }
@@ -383,19 +387,16 @@ footer {
 }
 
 .site-header {
-	/* layout header with nav menu on right */
-	display: flex;
-	justify-content: space-between;
-	margin: 0 auto 32px auto;
-	width: 100%;
 	max-width: 100%;
-	padding: 32px 0;
+	width: 100%;
+	margin: 0 0 48px 0;
+	padding: 8px 8px 8px 10%;
+	background-color: var(--color-site-title);
 }
 
 @media only screen and (max-width: 480px) {
 	.site-header {
-		display: block;
-		margin: 0 16px 32px 16px;
+		padding-left: 16px;
 	}
 }
 
@@ -750,14 +751,16 @@ input.has-focus[type="submit"],
 }
 
 .wp-block-code {
-	color: #333333;
-	font-size: 0.83333rem;
+	font-family: var(--code-font-family);
+	color: var(--color-code);
+	font-size: var(--code-font-size);
 	padding: 16px;
 	border-color: #DDDDDD;
 }
 
 .wp-block-code pre {
-	color: #333333;
+	font-family: var(--code-font-family);	
+	color: var(--color-code);
 }
 
 .wp-block-columns {
@@ -1367,7 +1370,7 @@ table th,
 }
 
 .site-title {
-	color: var(--color-site-title);
+	color: white;
 	font-family: Ubuntu, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 	font-size: 1.4rem;
 	font-weight: 700;
@@ -1386,17 +1389,19 @@ table th,
 }
 
 .site-title a:hover {
-	color: var(--color-hover);
+	color: currentColor;
 }
 
 .site-description {
 	font-size: 0.9rem;
 	opacity: 0.75;
+	color: white;
 }
 
 .main-navigation {
-	position: relative;
-	margin-top: 0;
+	width: 100%;
+	margin: 32px auto 4px auto;
+	text-align: right;
 	color: #333333;
 }
 
@@ -1569,6 +1574,15 @@ table th,
 .entry-content p {
 	word-wrap: break-word;
 }
+
+.entry-content a {
+	text-decoration: underline;
+	text-decoration-style: dashed;
+	text-decoration-thickness: .125em;
+	text-underline-offset: 1.5px;
+	text-decoration-skip: objects spaces;
+}
+
 
 .entry-content .more-link {
 	display: inline;
@@ -2011,7 +2025,7 @@ table th,
 .main-navigation > div > ul,
 .social-navigation > div > ul,
 .pagination .nav-links {
-	justify-content: center;
+	justify-content: right;
 }
 
 article {

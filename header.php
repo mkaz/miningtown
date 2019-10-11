@@ -21,32 +21,34 @@
 
 <body <?php body_class(); ?>>
 <div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'miningtown' ); ?></a>
+	<a class="skip-link screen-reader-text" href="#content">Skip to content</a>
 
-		<header id="masthead" class="site-header responsive-max-width">
+	<?php if ( has_nav_menu('header-menu') ) : ?>
+		<nav class="main-navigation responsive-max-width" aria-label="Main Navigation">
+			<?php wp_nav_menu( array( 'theme_location' => 'header-menu' ) ); ?>
+		</nav>
+	<?php endif; ?>
 
-			<div class="site-branding">
+	<header id="masthead" class="site-header">
+		
+		<div class="site-branding">
 
-				<?php if ( has_custom_logo() ) : ?>
-					<div class="site-logo"><?php the_custom_logo(); ?></div>
-				<?php endif; ?>
-				<?php $blog_info = get_bloginfo( 'name' ); ?>
-				<?php if ( ! empty( $blog_info ) ) : ?>
-					<h3 class="site-title">
-						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-							<?php bloginfo( 'name' ); ?>
-						</a>
-					</h3>
-					<p class="site-description">
-						<?php esc_html( bloginfo( 'description' ) ); ?>
-					</p>
-				<?php endif; ?>
-			</div>
-			<?php if ( has_nav_menu('header-menu') ) : ?>
-				<nav class="main-navigation" aria-label="<?php esc_attr_e( 'Main Navigation', 'miningtown' ); ?>">
-					<?php wp_nav_menu( array( 'theme_location' => 'header-menu' ) ); ?>
-				</nav>
+			<?php if ( has_custom_logo() ) : ?>
+				<div class="site-logo"><?php the_custom_logo(); ?></div>
 			<?php endif; ?>
-		</header>
+			<?php $blog_info = get_bloginfo( 'name' ); ?>
+			<?php if ( ! empty( $blog_info ) ) : ?>
+				<h3 class="site-title">
+					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+						<?php bloginfo( 'name' ); ?>
+					</a>
+				</h3>
+				<p class="site-description">
+					<?php esc_html( bloginfo( 'description' ) ); ?>
+				</p>
+			<?php endif; ?>
+		</div>
+
+	</header>
 
 	<div id="content" class="site-content">
