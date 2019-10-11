@@ -11,6 +11,7 @@
 add_action( 'after_setup_theme', function() {
 	
 	add_theme_support( 'editor-styles' );
+	add_theme_support( 'title-tag' );
 	add_editor_style( 'style-editor.css' );
 
 	add_theme_support(
@@ -101,23 +102,6 @@ function miningtown_fonts_url() {
 
 	return esc_url_raw( $fonts_url );
 }
-	
-
-
-/**
- * Set the content width in pixels, based on the child-theme's design and stylesheet.
- *
- * Priority 0 to make it available to lower priority callbacks.
- *
- * @global int $content_width Content width.
- */
-add_action( 'after_setup_theme', function() {
-	// This miningtownble is intended to be overruled from themes.
-	// Open WPCS issue: {@link https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards/issues/1043}.
-	// phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedVariableFound
-	$GLOBALS['content_width'] = apply_filters( 'miningtown_content_width', 640 );
-}, 0 );
-
 
 /**
  * Enqueue scripts and styles.
@@ -135,15 +119,30 @@ add_action( 'wp_enqueue_scripts', function() {
 
 } );
 
+add_action( 'init', function() {
+	register_nav_menus( [
+      'header-menu' => __( 'Header Menu' )
+    ] );
+} );
+
 add_action( 'widgets_init', function() { 
 	register_sidebar( array(
-		'name'          => 'Main Sidebar',
-		'id'            => 'sidebar-main',
+		'name'          => 'Footer Left',
+		'id'            => 'footer-left',
 		'before_widget' => '<div>',
 		'after_widget'  => '</div>',
 		'before_title'  => '',
 		'after_title'   => '',
 	) );
+
+	register_sidebar( array(
+		'name'          => 'Footer Right',
+		'id'            => 'footer-right',
+		'before_widget' => '<div>',
+		'after_widget'  => '</div>',
+		'before_title'  => '',
+		'after_title'   => '',
+	) );	
 } );
 
 

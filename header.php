@@ -32,33 +32,21 @@
 				<?php endif; ?>
 				<?php $blog_info = get_bloginfo( 'name' ); ?>
 				<?php if ( ! empty( $blog_info ) ) : ?>
-					<h3 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h3>
+					<h3 class="site-title">
+						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+							<?php bloginfo( 'name' ); ?>
+						</a>
+					</h3>
 					<p class="site-description">
 						<?php esc_html( bloginfo( 'description' ) ); ?>
 					</p>
-					
 				<?php endif; ?>
 			</div>
-
-			<?php if ( is_active_sidebar('sidebar-main') ) : ?>
-				<nav id="site-navigation" class="main-navigation" aria-label="<?php esc_attr_e( 'Main Navigation', 'miningtown' ); ?>">
-					<input type="checkbox" role="button" aria-haspopup="true" id="toggle" class="hide-visually">
-					<label for="toggle" id="toggle-menu">
-						<span class="dropdown-icon open" title="Open Menu">
-							<?php echo TwentyNineteen_SVG_Icons::get_svg( 'ui', 'menu', 32 ); ?>
-						</span>
-						<span class="dropdown-icon close" title="Close Menu">
-							<?php echo TwentyNineteen_SVG_Icons::get_svg( 'ui', 'menu-close', 32 ); ?>
-						</span>
-						<span class="hide-visually expanded-text"><?php _e( 'expanded', 'miningtown' ); ?></span>
-						<span class="hide-visually collapsed-text"><?php _e( 'collapsed', 'miningtown' ); ?></span>
-					</label>
-					<div id="sidebar-main">
-						<?php dynamic_sidebar( 'sidebar-main' ); ?>
-					</div>
+			<?php if ( has_nav_menu('header-menu') ) : ?>
+				<nav class="main-navigation" aria-label="<?php esc_attr_e( 'Main Navigation', 'miningtown' ); ?>">
+					<?php wp_nav_menu( array( 'theme_location' => 'header-menu' ) ); ?>
 				</nav>
 			<?php endif; ?>
-
 		</header>
 
 	<div id="content" class="site-content">
