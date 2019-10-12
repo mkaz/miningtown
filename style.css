@@ -39,7 +39,8 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
     --blockquote-font-family: 'Droid Serif', Georgia, serif;
 
     --h1-size: 1.8rem;
-20    --h3-size: 1.4rem;
+    --h2-size: 1.6rem;
+    --h3-size: 1.4rem;
     --h4-size: 1.4rem;
     --h5-size: 1.2rem;
 	--h6-size: 1.2rem;
@@ -49,7 +50,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	--color-site-title: #B71C1C;
     --color-link: #1565C0;
     --color-hover: red;
-    --color-accent: #feb24c;
+    --color-accent: #B71C1C;;
     --color-code: #8E24AA;
 }
 
@@ -405,6 +406,7 @@ footer {
 }
 
 .site-main {
+	min-height: 60vh;
 	padding: 0 16px;
 	margin-left: auto;
 	margin-right: auto;
@@ -633,7 +635,7 @@ input[type=checkbox] + label {
 figcaption {
 	color: #767676;
 	font-size: 0.69444rem;
-	margin-top: 8px);
+	margin-top: 8px;
 	margin-bottom: 16px;
 	text-align: center;
 }
@@ -849,6 +851,21 @@ input.has-focus[type="submit"],
 	margin-bottom: -16px;
 }
 
+.wp-social-menu {
+    margin-top: 8px;
+    display: flex;
+    list-style-type: none;
+}
+
+.wp-social-link {
+    margin-right: 8px;
+    fill: var(--color-link);
+}
+
+.wp-social-link:hover {
+    fill: var(--color-hover);
+}
+
 .alignfull {
     width: 100vw;
     position: relative;
@@ -1056,9 +1073,9 @@ p.has-background:not(.has-background-background-color) a {
 }
 
 .wp-block-quote {
-	border-left-color: var(--color-accent);
-	margin: 32px 0;
+	margin: 32px auto;
 	padding: 0 16px;
+    max-width: 90%;
 }
 
 .wp-block-quote > * {
@@ -1076,9 +1093,10 @@ p.has-background:not(.has-background-background-color) a {
 
 .wp-block-quote p {
 	font-family: var(--blockquote-font-family);
-	font-size: 1.728rem;
+	font-size: 1.2rem;
 	letter-spacing: normal;
-	line-height: 1.125;
+	line-height: 1.25;
+    color: var(--color-accent);
 }
 
 .wp-block-quote .wp-block-quote__citation,
@@ -1464,6 +1482,10 @@ table th,
 	color: var(--color-hover);
 }
 
+.page-header {
+	margin: 0;
+}
+
 .footer-navigation {
 	display: inline;
 }
@@ -1577,7 +1599,7 @@ table th,
 
 .entry-content a {
 	text-decoration: underline;
-	text-decoration-style: dashed;
+	text-decoration-style: dotted;
 	text-decoration-thickness: .125em;
 	text-underline-offset: 1.5px;
 	text-decoration-skip: objects spaces;
@@ -1640,8 +1662,8 @@ table th,
 
 .post-navigation .post-title {
 	font-family: var(--header-font-family);
-	font-size: 1.44rem;
-	font-weight: 600;
+	font-size: 1.2rem;
+	font-weight: 700;
 }
 
 .post-navigation .nav-links a {
@@ -1946,9 +1968,51 @@ table th,
 	font-weight: 600;
 }
 
-.widget-area {
-	flex: 0 0 100%;
+aside {
+	border-top: 2px solid var(--color-site-title);
+	margin-bottom: 64px;
 }
+
+.widget-area {
+	display: flex;
+	margin: 32px auto;
+	justify-content: space-around;
+	align-items: flex-start;
+}
+
+.widget-section {
+	max-width: 360px;
+	width: 100%;
+	margin: 0 32px;
+}
+
+.widget {
+    margin-bottom: 32px;
+}
+
+.widget h5 {
+    margin-bottom: 8px;
+}
+
+.widget .profile {
+    display: flex;
+    align-items: center;
+}
+
+.widget .profile .photo {
+    margin-right: 8px;
+}
+
+.widget .profile .photo img {
+    width: 72px;
+    height: 72px;
+    border-radius: 36px;
+}
+
+.widget .profile .name {
+    font-weight: 700;
+}
+    
 
 .sticky-post {
 	color: white;
@@ -1960,8 +2024,9 @@ table th,
 	padding: 8px 12px;
 }
 
-.page-title {
-	font-size: 1.728rem;
+h1.page-title {
+	font-size: var(--h1-size);
+	margin: 0;
 }
 
 .responsive-max-width {
@@ -1982,7 +2047,7 @@ table th,
 
 @media only screen and (min-width: 702px) {
 	.responsive-max-width {
-		max-width: 	( 702px - 32px);
+		max-width: calc( 702px - 32px);
 	}
 }
 
@@ -2064,17 +2129,17 @@ body.single article .entry-footer {
 	display: none;
 }
 
-body.home h3.year {
+body.home main h3.year {
 	margin-bottom: 0;
 }
 
-body.home ul {
+body.home main ul {
 	list-style-type: none;
 	margin-top: 8px;
 	margin-left: 0;
 }
 
-body.home li {
+body.home main li {
 	margin-bottom: 8px;
 }
 

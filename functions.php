@@ -130,19 +130,19 @@ add_action( 'widgets_init', function() {
 	register_sidebar( array(
 		'name'          => 'Footer Left',
 		'id'            => 'footer-left',
-		'before_widget' => '<div>',
+		'before_widget' => '<div class="widget">',
 		'after_widget'  => '</div>',
-		'before_title'  => '',
-		'after_title'   => '',
+		'before_title'  => '<h5>',
+		'after_title'   => '</h5>',
 	) );
 
 	register_sidebar( array(
 		'name'          => 'Footer Right',
 		'id'            => 'footer-right',
-		'before_widget' => '<div>',
+		'before_widget' => '<div class="widget">',
 		'after_widget'  => '</div>',
-		'before_title'  => '',
-		'after_title'   => '',
+		'before_title'  => '<h5>',
+		'after_title'   => '</h5>',
 	) );	
 } );
 

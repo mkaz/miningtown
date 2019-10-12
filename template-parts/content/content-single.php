@@ -18,7 +18,7 @@
 		<?php if ( ! is_page() ) : ?>
 		<div class="entry-meta">
 			<?php miningtown_entry_meta(); ?>
-		</div><!-- .meta-info -->
+		</div>
 		<?php endif; ?>
 	</header>
 
@@ -46,14 +46,14 @@
 			)
 		);
 		?>
-	</div><!-- .entry-content -->
+	</div>
 
 	<footer class="entry-footer responsive-max-width">
 		<?php miningtown_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
+	</footer>
 
 	<?php if ( ! is_singular( 'attachment' ) ) : ?>
 		<?php get_template_part( 'template-parts/post/author', 'bio' ); ?>
 	<?php endif; ?>
 
-</article><!-- #post-${ID} -->
+</article>

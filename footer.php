@@ -14,6 +14,17 @@
 ?>
 	</div>
 
+	<aside>
+		<div class="widget-area responsive-max-width">
+			<div class="widget-section">
+				<?php dynamic_sidebar("footer-left"); ?>
+			</div>
+			<div class="widget-section">
+				<?php dynamic_sidebar("footer-right"); ?>
+			</div>
+		</div>
+	</aside>
+
 	<footer id="colophon" class="site-footer responsive-max-width">
 		<?php get_template_part( 'template-parts/footer/footer', 'widgets' ); ?>
 		<?php
