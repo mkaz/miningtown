@@ -1179,6 +1179,7 @@ table,
 	width: 100%;
 	min-width: 240px;
 	border-collapse: collapse;
+    font-size: 0.85rem;
 }
 
 table th,
@@ -1426,8 +1427,13 @@ table th,
 /* menus */
 .main-navigation ul.menu {
 	margin: 0;
-	display: flex;
 	list-style-type: none;
+	text-align: right;
+	padding-right: 8px;
+}
+
+.main-navigation ul.menu li {
+	display: inline-block;
 }
 
 .main-navigation a {
@@ -1975,9 +1981,10 @@ aside {
 
 .widget-area {
 	display: flex;
-	margin: 32px auto;
-	justify-content: space-around;
+	flex-wrap: wrap;
+	justify-content: center;
 	align-items: flex-start;
+	margin: 32px auto;
 }
 
 .widget-section {
@@ -2146,6 +2153,15 @@ body.home main li {
 body.home main time {
 	display: inline-block;
 	width: 90px;
+}
+
+@media only screen and (max-width: 480px) {
+	body.home main time {
+		display: block;
+		width: 100%;
+		margin-top: 16px;
+		font-size: 0.85rem;
+	}
 }
 
 .data-table {
