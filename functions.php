@@ -13,6 +13,8 @@ add_action( 'after_setup_theme', function() {
 	add_theme_support( 'editor-styles' );
 	add_theme_support( 'title-tag' );
 	add_editor_style( 'style-editor.css' );
+	add_theme_support( 'responsive-embeds' );
+	add_theme_support( 'align-wide' );
 
 	add_theme_support(
 		'editor-font-sizes',
@@ -144,21 +146,6 @@ add_action( 'widgets_init', function() {
 		'before_title'  => '<h5>',
 		'after_title'   => '</h5>',
 	) );	
-} );
-
-
-/**
- * Changes comment form default fields.
- */
-add_filter( 'comment_form_defaults', function( $defaults ) {
-	$comment_field = $defaults['comment_field'];
-
-	// Adjust height of comment form.
-	$defaults['comment_field'] = preg_replace( '/rows="\d+"/', 'rows="5"', $comment_field );
-	$defaults['title_reply'] = __( 'Add Comment' );
-	$defaults['label_submit'] = __( 'Submit' );
-
-	return $defaults;
 } );
 
 require get_template_directory() . '/inc/class-varia-svg-icons.php';

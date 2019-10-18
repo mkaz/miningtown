@@ -13,5 +13,5 @@
 <?php if ( ! is_page() ) : ?>
 <div class="entry-meta">
 	<?php varia_entry_footer(); ?>
-</div><!-- .meta-info -->
+</div>
 <?php endif; ?>

@@ -34,23 +34,6 @@ if ( ! function_exists( 'miningtown_posted_on' ) ) :
 endif;
 
 
-if ( ! function_exists( 'miningtown_comment_count' ) ) :
-	/**
-	 * Prints HTML with the comment count for the current post.
-	 */
-	function miningtown_comment_count() {
-		if ( ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
-			echo '<span class="comments-link">';
-			echo TwentyNineteen_SVG_Icons::get_svg( 'ui', 'comment', 16 );
-
-			/* translators: %s: Name of current post. Only visible to screen readers. */
-			comments_popup_link( sprintf( __( 'Leave a comment<span class="screen-reader-text"> on %s</span>', 'miningtown' ), get_the_title() ) );
-
-			echo '</span>';
-		}
-	}
-endif;
-
 if ( ! function_exists( 'miningtown_entry_meta' ) ) :
 	/**
 	 * Prints HTML with meta information for the categories, tags and comments.
@@ -86,11 +69,6 @@ if ( ! function_exists( 'miningtown_entry_meta' ) ) :
 					$tags_list
 				); // WPCS: XSS OK.
 			}
-		}
-
-		// Comment count.
-		if ( ! is_singular() ) {
-			miningtown_comment_count();
 		}
 
 		// Edit post link.
@@ -148,11 +126,6 @@ if ( ! function_exists( 'miningtown_entry_footer' ) ) :
 					$tags_list
 				); // WPCS: XSS OK.
 			}
-		}
-
-		// Comment count.
-		if ( ! is_singular() ) {
-			miningtown_comment_count();
 		}
 
 		// Edit post link.
