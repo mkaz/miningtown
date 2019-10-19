@@ -18,37 +18,32 @@ get_header(); ?>
 
 <main id="main" class="site-main responsive-max-width">
 
-	<?php if ( have_posts() ) : ?>
-	<?php $previous_year = 1970; ?>
-	<?php while ( have_posts() ) : the_post(); ?>
-		<?php
-		$current_year = get_the_date( 'Y' );
-		if ( $current_year != $previous_year ) {
-			// do we need to close previous year tag
-			if ( $previous_year != '1970' ) {
-				echo '</ul>';
-			}
-			echo '<h3 class="year">' . $current_year . '</h3>';
-			echo '<ul>';
-		}
-		?>
-		<li class="hentry">
-			<time class="entry-date published" datetime="<?php echo esc_attr( get_the_date( 'c' ) ); ?>">
-				<?php echo esc_html( get_the_date( 'M j' ) ); ?>
-			</time>
-			<span class="entry-title">
-				<?php the_title( sprintf( '<a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a>' ); ?>
-			</span>
-		</li>
+	<header class="page-header">
+		<h2> Hi, I'm Marcus Kazmierczak </h2>
+		<p> A software engineer creating tools to help people empower themselves.
+		I believe open source and sharing our collective knowledge can help us move
+		the world forward. I hope this site is a small contribution to that collective.
+		</p>
+	</header>
 
-		<?php $previous_year = $current_year; ?>
-	<?php endwhile; ?>
-	</ul>
-	<?php else : ?>
-		<?php // If no content, include the "No posts found" template.
+	<?php if ( have_posts() ) : ?>
+
+		<h5> Articles </h5>
+
+		<?php
+		while ( have_posts() ) :
+			the_post();
+			get_template_part( 'template-parts/content/content', 'excerpt' );
+		endwhile;
+
+		miningtown_the_posts_navigation();
+
+		// If no content, include the "No posts found" template.
+	else :
 		get_template_part( 'template-parts/content/content', 'none' );
-		?>
-	<?php endif; ?>
+
+	endif;
+	?>
 
 </main>
 

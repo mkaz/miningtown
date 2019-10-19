@@ -534,7 +534,7 @@ blockquote p {
 
 blockquote cite,
 blockquote footer {
-	font-size: 0.83333rem;
+	font-size: 0.8rem;
 	letter-spacing: normal;
 }
 
@@ -1027,7 +1027,7 @@ p.has-background:not(.has-background-background-color) a {
 .wp-block-pullquote cite,
 .wp-block-pullquote footer {
 	color: #767676;
-	font-size: 0.83333rem;
+	font-size: 0.8rem;
 	letter-spacing: normal;
 	display: block;
 }
@@ -1096,7 +1096,7 @@ p.has-background:not(.has-background-background-color) a {
 .wp-block-quote cite,
 .wp-block-quote footer {
 	color: #767676;
-	font-size: 0.83333rem;
+	font-size: 0.8rem;
 	letter-spacing: normal;
 }
 
@@ -1122,7 +1122,7 @@ p.has-background:not(.has-background-background-color) a {
 .wp-block-quote.is-large cite,
 .wp-block-quote.is-large footer {
 	color: #767676;
-	font-size: 0.83333rem;
+	font-size: 0.8rem;
 	letter-spacing: normal;
 }
 
@@ -1146,8 +1146,8 @@ hr.is-style-wide {
 hr.is-style-dots:before {
 	color: #DDDDDD;
 	font-size: 1.728rem;
-	letter-spacing: 0.83333rem;
-	padding-left: 0.83333rem;
+	letter-spacing: 0.8rem;
+	padding-left: 0.8rem;
 }
 
 .wp-block-jetpack-slideshow ul {
@@ -1356,7 +1356,7 @@ table th,
 
 .is-small-text,
 .has-small-font-size {
-	font-size: 0.83333rem;
+	font-size: 0.8rem;
 }
 
 .is-regular-text,
@@ -1511,6 +1511,16 @@ table th,
 	margin: 0;
 }
 
+body.home .page-header {
+	border-bottom: 2px double var(--color-accent);
+	padding-bottom: 1.0rem;
+	margin-bottom: 2.0rem;
+}
+
+body.home .page-header h2 {
+	margin-bottom: 0.5rem;
+}
+
 .footer-navigation {
 	display: inline;
 }
@@ -1550,7 +1560,7 @@ table th,
 
 .footer-navigation .footer-menu a {
 	font-family: var(--main-font-family);
-	font-size: 0.83333rem;
+	font-size: 0.8rem;
 	font-weight: normal;
 	padding: 16px;
 	color: currentColor;
@@ -1569,7 +1579,7 @@ table th,
 	color: #767676;
 	clear: both;
 	float: none;
-	font-size: 0.83333rem;
+	font-size: 0.8rem;
 	display: block;
 }
 
@@ -1682,7 +1692,7 @@ table th,
 
 /* Next/Previous navigation */
 .post-navigation .meta-nav {
-	font-size: 0.83333rem;
+	font-size: 0.8rem;
 }
 
 .post-navigation .post-title {
@@ -1804,7 +1814,7 @@ aside {
 	background-color: red;
 	font-family: var(--system-font);
 	font-weight: bold;
-	font-size: 0.83333rem;
+	font-size: 0.8rem;
 	line-height: 1;
 	padding: 8px 12px;
 }
@@ -1902,34 +1912,6 @@ body.single article .entry-meta {
 
 body.single article .entry-footer {
 	display: none;
-}
-
-body.home main h3.year {
-	margin-bottom: 0;
-}
-
-body.home main ul {
-	list-style-type: none;
-	margin-top: 8px;
-	margin-left: 0;
-}
-
-body.home main li {
-	margin-bottom: 8px;
-}
-
-body.home main time {
-	display: inline-block;
-	width: 90px;
-}
-
-@media only screen and (max-width: 480px) {
-	body.home main time {
-		display: block;
-		width: 100%;
-		margin-top: 16px;
-		font-size: 0.85rem;
-	}
 }
 
 .data-table {

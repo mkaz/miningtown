@@ -19,13 +19,13 @@
 		}
 		the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' );
 		?>
-	</header><!-- .entry-header -->
+	</header>
 
 	<div class="entry-content responsive-max-width">
 		<?php the_excerpt(); ?>
-	</div><!-- .entry-content -->
+	</div>
 
 	<footer class="entry-footer responsive-max-width">
 		<?php miningtown_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
-</article><!-- #post-${ID} -->
+	</footer>
+</article>
