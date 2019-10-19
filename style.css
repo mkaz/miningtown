@@ -464,8 +464,8 @@ footer {
 	.site-main > article > *,
 	.entry-content > *,
 	.widget-area > * {
-		margin-top: 32px;
-		margin-bottom: 32px;
+		margin-top: 1.0rem;
+		margin-bottom: 2.0rem;
 	}
 }
 
