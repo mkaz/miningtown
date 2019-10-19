@@ -18,13 +18,15 @@ get_header(); ?>
 
 <main id="main" class="site-main responsive-max-width">
 
-	<header class="page-header">
-		<h2> Hi, I'm Marcus Kazmierczak </h2>
-		<p> A software engineer creating tools to help people empower themselves.
-		I believe open source and sharing our collective knowledge can help us move
-		the world forward. I hope this site is a small contribution to that collective.
-		</p>
-	</header>
+	<?php if ( ! get_query_var('paged') ) : ?>
+		<header class="page-header">
+			<h2> Hi, I'm Marcus Kazmierczak </h2>
+			<p> A software engineer creating tools to help people empower themselves.
+			I believe open source and sharing our collective knowledge can help us move
+			the world forward. I hope this site is a small contribution to that collective.
+			</p>
+		</header>
+	<?php endif; ?>
 
 	<?php if ( have_posts() ) : ?>
 
