@@ -1634,9 +1634,8 @@ body.home .page-header h2 {
 
 .entry-content a {
 	text-decoration: underline;
-	text-decoration-style: dotted;
-	text-decoration-thickness: .125em;
-	text-underline-offset: 1.5px;
+	text-decoration-thickness: 1px;
+	text-underline-offset: 2px;
 	text-decoration-skip: objects spaces;
 }
 
