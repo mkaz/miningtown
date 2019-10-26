@@ -1432,7 +1432,7 @@ table th,
 
 .site-description {
 	font-size: 0.9rem;
-	opacity: 0.75;
+	opacity: 0.85;
 	color: white;
 }
 
@@ -1477,7 +1477,7 @@ table th,
 }
 
 .site-info {
-	color: #767676;
+	color: #444444;
 	font-family: var(--system-font);
 	font-size: 0.60rem;
 }
