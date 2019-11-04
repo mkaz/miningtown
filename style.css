@@ -503,10 +503,6 @@ footer {
 	margin-bottom: 0;
 }
 
-.entry-content > * {
-	
-}
-
 .entry-content > *.alignleft, .entry-content > *.alignright,
 .entry-content > *.alignleft:first-child + *,
 .entry-content > *.alignright:first-child + *, .entry-content > *.alignfull {
@@ -520,6 +516,15 @@ footer {
 .entry-content > *.alignfull + .alignleft,
 .entry-content > *.alignfull + .alignright {
 	margin-top: 32px;
+}
+
+.entry-content h2,
+.entry-content h3,
+.entry-content h4,
+.entry-content h5,
+.entry-content h6 {
+    margin-top: 2.0rem;
+    margin-bottom: 1.0rem;
 }
 
 blockquote {
