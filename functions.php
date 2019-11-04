@@ -81,6 +81,29 @@ add_action( 'after_setup_theme', function() {
 			),
 		)
 	);
+
+	// Adjust code-syntax-block to only support a small set
+	add_filter( 'mkaz_code_syntax_language_list', function() {
+		return array(
+			"bash" => "Bash",
+			"go" => "Go",
+			"html" => "HTML",
+			"javascript" => "JavaScript",
+			"json" => "JSON",
+			"markdown" => "Markdown",
+			"php" => "PHP",
+			"python" => "Python",
+			"jsx" => "React JSX",
+			"sass" => "Sass",
+			"sql" => "SQL",
+			"svg" => "SVG",
+			"toml" => "TOML",
+			"vim" => "vim",
+			"xml" => "XML",
+			"yaml" => "YAML",
+		);
+	} );
+
 } );
 
 
