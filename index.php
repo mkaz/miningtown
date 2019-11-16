@@ -20,11 +20,7 @@ get_header(); ?>
 
 	<?php if ( ! get_query_var('paged') ) : ?>
 		<header class="page-header">
-			<h2> Hi, I'm Marcus Kazmierczak </h2>
-			<p> A software engineer creating tools to help people empower themselves.
-			I believe open source and sharing our collective knowledge can help us move
-			the world forward. I hope this site is a small contribution to that collective.
-			</p>
+			<?php dynamic_sidebar("author-bio"); ?>
 		</header>
 	<?php endif; ?>
 

@@ -168,7 +168,17 @@ add_action( 'widgets_init', function() {
 		'after_widget'  => '</div>',
 		'before_title'  => '<h5>',
 		'after_title'   => '</h5>',
-	) );	
+	) );
+
+	register_sidebar( array(
+		'name'          => 'Author Bio',
+		'id'            => 'author-bio',
+		'before_widget' => '<p>',
+		'after_widget'  => '</p>',
+		'before_title'  => '<h2>',
+		'after_title'   => '</h2>',
+	) );
+
 } );
 
 require get_template_directory() . '/inc/class-varia-svg-icons.php';
