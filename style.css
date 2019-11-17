@@ -385,11 +385,10 @@ footer {
 }
 
 .site-header {
-	max-width: 100%;
 	width: 100%;
-	margin: 0 0 48px 0;
-	padding: 8px 8px 8px 10%;
-	background-color: var(--color-site-title);
+	margin: 16px auto 64px auto;
+	padding: 8px;
+	display: flex;
 }
 
 @media only screen and (max-width: 480px) {
@@ -400,6 +399,7 @@ footer {
 
 .site-branding {
 	width: 100%;
+	margin-top: 16px;
 }
 
 .site-main {
@@ -481,7 +481,6 @@ footer {
 	margin-bottom: 0;
 }
 
-.site-header > *,
 .entry-header > *,
 .post-thumbnail > *,
 .author-bio > * {
@@ -489,14 +488,12 @@ footer {
 	margin-bottom: 16px;
 }
 
-.site-header > *:first-child,
 .entry-header > *:first-child,
 .post-thumbnail > *:first-child,
 .author-bio > *:first-child {
 	margin-top: 0;
 }
 
-.site-header > *:last-child,
 .entry-header > *:last-child,
 .post-thumbnail > *:last-child,
 .author-bio > *:last-child {
@@ -1413,13 +1410,15 @@ table th,
 }
 
 .site-title {
-	color: white;
-	font-family: Ubuntu, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	display: inline-block;
+	font-family: var(--header-font-family);
 	font-size: 1.4rem;
 	font-weight: 700;
 	letter-spacing: normal;
 	line-height: 1;
+	padding-bottom: 4px;
 	margin-bottom: 0;
+	border-bottom: 2px solid var(--color-site-title);
 }
 
 .site-title a {
@@ -1442,8 +1441,9 @@ table th,
 }
 
 .main-navigation {
+	max-width: 320px;
 	width: 100%;
-	margin: 32px auto 4px auto;
+	margin-top: 0;
 	text-align: right;
 	color: #333333;
 }
@@ -1834,31 +1834,31 @@ h1.page-title {
 
 @media only screen and (min-width: 480px) {
 	.responsive-max-width {
-		max-width: calc( 480px - 32px);
+		max-width: 448px;
 	}
 }
 
 @media only screen and (min-width: 560px) {
 	.responsive-max-width {
-		max-width: calc( 560px - 32px);
+		max-width: 528px;
 	}
 }
 
 @media only screen and (min-width: 702px) {
 	.responsive-max-width {
-		max-width: calc( 702px - 32px);
+		max-width: 670px;
 	}
 }
 
 @media only screen and (min-width: 960px) {
 	.responsive-max-width {
-		max-width: calc( 702px - 32px);
+		max-width: 670px;
 	}
 }
 
 @media only screen and (min-width: 1024px) {
 	.responsive-max-width {
-		max-width: calc( 702px - 32px);
+		max-width: 670px;
 	}
 }
 

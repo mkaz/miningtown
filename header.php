@@ -23,16 +23,9 @@
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content">Skip to content</a>
 
-	<?php if ( has_nav_menu('header-menu') ) : ?>
-		<nav class="main-navigation responsive-max-width" aria-label="Main Navigation">
-			<?php wp_nav_menu( array( 'theme_location' => 'header-menu' ) ); ?>
-		</nav>
-	<?php endif; ?>
-
-	<header id="masthead" class="site-header">
+	<header id="masthead" class="site-header responsive-max-width">
 		
 		<div class="site-branding">
-
 			<?php if ( has_custom_logo() ) : ?>
 				<div class="site-logo"><?php the_custom_logo(); ?></div>
 			<?php endif; ?>
@@ -48,7 +41,12 @@
 				</p>
 			<?php endif; ?>
 		</div>
-
+		
+		<?php if ( has_nav_menu('header-menu') ) : ?>
+			<nav class="main-navigation" aria-label="Main Navigation">
+				<?php wp_nav_menu( array( 'theme_location' => 'header-menu' ) ); ?>
+			</nav>
+		<?php endif; ?>
 	</header>
 
 	<div id="content" class="site-content">
