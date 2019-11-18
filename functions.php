@@ -173,8 +173,8 @@ add_action( 'widgets_init', function() {
 	register_sidebar( array(
 		'name'          => 'Author Bio',
 		'id'            => 'author-bio',
-		'before_widget' => '<p>',
-		'after_widget'  => '</p>',
+		'before_widget' => '<div>',
+		'after_widget'  => '</div>',
 		'before_title'  => '<h2>',
 		'after_title'   => '</h2>',
 	) );

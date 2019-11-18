@@ -386,7 +386,7 @@ footer {
 
 .site-header {
 	width: 100%;
-	margin: 16px auto 64px auto;
+	margin: 16px auto 32px auto;
 	padding: 8px;
 	display: flex;
 }
@@ -1516,14 +1516,24 @@ table th,
 	margin: 0;
 }
 
-body.home .page-header {
-	border-bottom: 2px double var(--color-accent);
-	padding-bottom: 1.0rem;
-	margin-bottom: 2.0rem;
+section.author-bio {
+	color: white;
+	border-radius: 16px;
+	background-color: rgba(200, 8, 8, 0.8);
+	padding: 2.0rem;
+	margin-top: 4.0rem;
 }
 
-body.home .page-header h2 {
+section.author-bio h2 {
+	color: white;
+	margin-left: 144px;
 	margin-bottom: 0.5rem;
+}
+
+section.author-bio img {
+	float: left;
+	margin: -32px 16px 16px 0;
+	border-radius: 64px;
 }
 
 .footer-navigation {

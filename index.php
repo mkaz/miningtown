@@ -18,11 +18,6 @@ get_header(); ?>
 
 <main id="main" class="site-main responsive-max-width">
 
-	<?php if ( ! get_query_var('paged') ) : ?>
-		<header class="page-header">
-			<?php dynamic_sidebar("author-bio"); ?>
-		</header>
-	<?php endif; ?>
 
 	<?php if ( have_posts() ) : ?>
 
@@ -43,6 +38,12 @@ get_header(); ?>
 	endif;
 	?>
 
+	<?php if ( ! get_query_var('paged') ) : ?>
+		<section class="author-bio">
+			<?php dynamic_sidebar("author-bio"); ?>
+		</section>
+	<?php endif; ?>
+	
 </main>
 
 <?php get_footer();
