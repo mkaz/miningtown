@@ -23,7 +23,7 @@
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content">Skip to content</a>
 
-	<header id="masthead" class="site-header responsive-max-width">
+	<header id="masthead" class="site-header">
 		
 		<div class="site-branding">
 			<?php if ( has_custom_logo() ) : ?>

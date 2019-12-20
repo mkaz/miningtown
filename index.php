@@ -16,12 +16,12 @@
 
 get_header(); ?>
 
-<main id="main" class="site-main responsive-max-width">
+<main id="main" class="site-main">
 
 
 	<?php if ( have_posts() ) : ?>
 
-		<h5> Articles </h5>
+		<h5 class="page-title"> Articles </h5>
 
 		<?php
 		while ( have_posts() ) :

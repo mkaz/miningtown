@@ -25,7 +25,7 @@
 		</div>
 	</aside>
 
-	<footer id="colophon" class="site-footer responsive-max-width">
+	<footer id="colophon" class="site-footer">
 		<?php
 		if ( function_exists( 'the_privacy_policy_link' ) ) {
 			the_privacy_policy_link( '', '<span role="separator" aria-hidden="true"></span>' );
