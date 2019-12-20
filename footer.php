@@ -10,9 +10,15 @@
  * 
  * @since 1.0.0
  */
-
 ?>
-	</div>
+
+	<?php if ( ! get_query_var('paged') ) : ?>
+		<section class="author-bio">
+			<?php dynamic_sidebar("author-bio"); ?>
+		</section>
+	<?php endif; ?>
+
+</div>
 
 	<aside>
 		<div class="widget-area">

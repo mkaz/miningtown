@@ -37,12 +37,6 @@ get_header(); ?>
 
 	endif;
 	?>
-
-	<?php if ( ! get_query_var('paged') ) : ?>
-		<section class="author-bio">
-			<?php dynamic_sidebar("author-bio"); ?>
-		</section>
-	<?php endif; ?>
 	
 </main>
 
