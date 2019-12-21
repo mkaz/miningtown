@@ -10,9 +10,15 @@
  * 
  * @since 1.0.0
  */
-
 ?>
-	</div>
+
+	<?php if ( ! get_query_var('paged') ) : ?>
+		<section class="author-bio">
+			<?php dynamic_sidebar("author-bio"); ?>
+		</section>
+	<?php endif; ?>
+
+</div>
 
 	<aside>
 		<div class="widget-area">
@@ -25,7 +31,7 @@
 		</div>
 	</aside>
 
-	<footer id="colophon" class="site-footer responsive-max-width">
+	<footer id="colophon" class="site-footer">
 		<?php
 		if ( function_exists( 'the_privacy_policy_link' ) ) {
 			the_privacy_policy_link( '', '<span role="separator" aria-hidden="true"></span>' );

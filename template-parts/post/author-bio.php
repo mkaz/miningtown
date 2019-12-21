@@ -8,7 +8,7 @@
  */
 
 if ( (bool) get_the_author_meta( 'description' ) ) : ?>
-<div class="author-bio responsive-max-width">
+<div class="author-bio">
 	<h2 class="author-title">
 		<span class="author-heading">
 			<?php

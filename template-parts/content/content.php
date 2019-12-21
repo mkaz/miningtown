@@ -12,7 +12,7 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header responsive-max-width">
+	<header class="entry-header">
 		<?php
 		if ( is_sticky() && is_home() && ! is_paged() ) {
 			printf( '<span class="sticky-post">%s</span>', _x( 'Featured', 'post', 'miningtown' ) );
@@ -25,7 +25,7 @@
 		?>
 	</header><!-- .entry-header -->
 
-	<div class="entry-content responsive-max-width">
+	<div class="entry-content">
 		<?php
 		the_content(
 			sprintf(
@@ -51,7 +51,7 @@
 		?>
 	</div><!-- .entry-content -->
 
-	<footer class="entry-footer responsive-max-width">
+	<footer class="entry-footer">
 		<?php miningtown_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-${ID} -->

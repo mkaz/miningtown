@@ -22,7 +22,7 @@
 		<?php endif; ?>
 	</header>
 
-	<div class="entry-content responsive-max-width">
+	<div class="entry-content">
 		<?php
 		the_content(
 			sprintf(
@@ -48,7 +48,7 @@
 		?>
 	</div>
 
-	<footer class="entry-footer responsive-max-width">
+	<footer class="entry-footer">
 		<?php miningtown_entry_footer(); ?>
 	</footer>
 

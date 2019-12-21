@@ -9,7 +9,7 @@
 get_header();
 ?>
 
-	<main id="main" class="site-main responsive-max-width">
+	<main id="main" class="site-main">
 
 		<div class="error-404 not-found">
 			<header class="page-header">
