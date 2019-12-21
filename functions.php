@@ -115,7 +115,6 @@ add_action( 'after_setup_theme', function() {
 function miningtown_fonts_url() {
 	       
 	$font_families = array();
-	$font_families[] = 'PT+Serif:400,700';
 	$font_families[] = 'Ubuntu:500';
 	$font_families[] = 'Source+Code+Pro:400';
 
