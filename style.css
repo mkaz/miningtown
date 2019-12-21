@@ -923,7 +923,6 @@ table th,
 	width: 100%;
 	margin-top: 0;
 	text-align: right;
-	color: #333333;
 }
 
 /* menus */
@@ -939,20 +938,11 @@ table th,
 }
 
 .main-navigation a {
-	color: var(--color-link);
 	display: block;
 	font-family: var(--main-font-family);
 	font-size: 0.85rem;
 	font-weight: normal;
 	padding: 0 0 0 16px;
-}
-
-.main-navigation a:link, .main-navigation a:visited {
-	color: var(--color-link);
-}
-
-.main-navigation a:hover {
-	color: 	var(--color-hover);
 }
 
 #searchform > div:nth-child(1) {
@@ -1258,11 +1248,16 @@ aside {
     margin-bottom: 8px;
 }
 
+/* links on blue background */
+.main-navigation a,
+.main-navigation a:link,
+.main-navigation a:visited,
 .widget a,
 .widget a:visited {
 	color: #CCCCCC;
 }
 
+.main-navigation a:hover,
 .widget a:hover {
 	color: #FFFE89;
 }
