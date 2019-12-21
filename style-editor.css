@@ -6,14 +6,13 @@
    * so copied and pasted style.css
    */
    :root {
-    --system-font: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+	--system-font: -apple-system, BlinkMacSystemFont, Roboto, Oxygen, "Droid Sans", Ubuntu, Cantarell, "Fira Sans", "Helvetica Neue", sans-serif;
+	--main-font-family: var(--system-font);
+    --main-font-size: 18px;
+    --code-font-family: SFMono-Regular, Consolas, "Liberation Mono", Menlo, Inconsolata, "Courier New", monospace;
+    --code-font-size: 0.8889rem;
 
-    --main-font-family: "PT Serif", "Noto Serif", "Ubuntu", serif;
-    --main-font-size: 20px;
-    --code-font-family: "Source Code Pro", Consolas, Inconsolata, Menlo, monospace;
-    --code-font-size: 0.9rem;
-
-    --header-font-family: 'Roboto Condensed', Roboto, Ubuntu, -apple-system, BlinkMacSystemFont, sans-serif;
+    --header-font-family: Ubuntu, -apple-system, BlinkMacSystemFont, Charcoal, Futura, sans-serif;
     --blockquote-font-family: 'Droid Serif', Georgia, serif;
 
     --h1-size: 1.8rem;

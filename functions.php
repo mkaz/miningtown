@@ -116,7 +116,6 @@ function miningtown_fonts_url() {
 	       
 	$font_families = array();
 	$font_families[] = 'Ubuntu:500';
-	$font_families[] = 'Source+Code+Pro:400';
 
 	$query_args = array(
 			'family' => implode( '|', $font_families ),
