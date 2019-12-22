@@ -325,6 +325,9 @@ a {
 }
 
 @media only screen and (max-width: 560px) {
+	.widget-area,
+	.author-bio,
+	.site-header,
 	.site-main {
 		padding: 16px;
 	}
