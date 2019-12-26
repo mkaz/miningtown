@@ -24,7 +24,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
   * No node_moduels required.
   */
 :root {
-    --system-font: -apple-system, BlinkMacSystemFont, Roboto, Oxygen, "Droid Sans", Ubuntu, Cantarell, "Fira Sans", "Helvetica Neue", sans-serif;
+    --system-font: -apple-system, BlinkMacSystemFont, Roboto, Oxygen, "Droid Sans", Cantarell, "Fira Sans", "Helvetica Neue", sans-serif;
 	--main-font-family: var(--system-font);
     --main-font-size: 18px;
     --code-font-family: SFMono-Regular, Consolas, "Liberation Mono", Menlo, Inconsolata, "Courier New", monospace;
@@ -899,6 +899,11 @@ table th,
 	padding-bottom: 8px;
 	border-bottom: 2px solid var(--color-accent);
 	margin-bottom: 8px;
+}
+@media only screen and (max-width: 560px){
+	.site-title {
+		font-size: 2.0rem;
+	}
 }
 
 .site-title a {
