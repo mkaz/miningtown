@@ -318,8 +318,8 @@ a {
 .author-bio,
 .site-header,
 .site-main {
-	max-width: 808px;
-	padding: 32px 64px;
+	max-width: 872px;
+	padding: 64px 96px;
 	margin-left: auto;
 	margin-right: auto;
 }
@@ -334,8 +334,8 @@ a {
 }
 
 .site-header {
-	margin-top: 16px;
-	margin-bottom: 32px;
+	margin-top: 0;
+	margin-bottom: 0;
 	display: flex;
 }
 
@@ -999,7 +999,7 @@ section.author-bio {
 	padding: 2.0rem;
 	margin-top: 2.0rem;
 }
-@media only screen and (max-width: 808px) {
+@media only screen and (max-width: 872px) {
 	section.author-bio {
 		margin-left: 16px;
 		margin-right: 16px;
@@ -1330,7 +1330,7 @@ article {
 
 article .entry-header {
 	order: 1;
-	margin: 0;
+	margin: 0 0 1.0rem 0;
 }
 
 article .entry-content {
