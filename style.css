@@ -1151,6 +1151,9 @@ section.author-bio svg {
 	text-decoration-skip: objects spaces;
 }
 
+.entry-content li {
+	margin-bottom: 1.0rem;
+}
 
 .entry-content .more-link {
 	display: inline;
@@ -1330,7 +1333,7 @@ article {
 
 article .entry-header {
 	order: 1;
-	margin: 0 0 1.0rem 0;
+	margin: 0;
 }
 
 article .entry-content {
@@ -1340,6 +1343,10 @@ article .entry-content {
 article .entry-footer {
 	order: 2;
 	margin: 0;
+}
+
+body.single article .entry-header {
+	margin-bottom: 1.0rem;
 }
 
 body.single article .entry-title {
