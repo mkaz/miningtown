@@ -39,7 +39,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
     --h4-size: 1.3333rem;
     --h5-size: 1.2222rem;
 	--h6-size: 1.1111rem;
-	
+
 	--color-main: #333333;
 	--color-dark: #152934;
     --color-link: #1565C0;
@@ -235,7 +235,7 @@ textarea {
 a {
 	text-decoration: none;
 	background-color: transparent;
-	color: var(--color-link); 
+	color: var(--color-link);
 }
 
 a:hover {
@@ -591,7 +591,7 @@ input.has-focus[type="submit"],
 }
 
 .wp-block-code pre {
-	font-family: var(--code-font-family);	
+	font-family: var(--code-font-family);
 	color: var(--color-code);
 }
 
@@ -1027,7 +1027,7 @@ section.author-bio ul {
 }
 
 section.author-bio li {
-	margin-right: 16px;	
+	margin-right: 16px;
 }
 
 section.author-bio svg {
@@ -1356,7 +1356,7 @@ body.single article .entry-title {
 }
 
 body.single article .entry-meta {
-	margin: 0;
+	margin: 8px 0 0 0;
 }
 
 body.single article .entry-footer {
