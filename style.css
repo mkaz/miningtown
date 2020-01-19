@@ -1157,6 +1157,15 @@ section.author-bio svg {
 	margin-bottom: 1.0rem;
 }
 
+.entry-content ol {
+	padding-left: 1.3rem;
+	margin-left: 1.3rem;
+}
+
+.entry-content ol li {
+	margin-bottom: 4px;
+}
+
 .entry-content .more-link {
 	display: inline;
 	color: inherit;
