@@ -5,7 +5,7 @@
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
  *
  * @package miningtown
- * 
+ *
  * @since 1.0.0
  */
 
@@ -39,6 +39,11 @@ get_header();
 							'<span class="post-title">%title</span>',
 					)
 				);
+			}
+
+			// If comments are open or we have at least one comment, load up the comment template.
+			if ( comments_open() || get_comments_number() ) {
+				comments_template();
 			}
 
 		endwhile;

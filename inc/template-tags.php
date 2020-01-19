@@ -97,7 +97,7 @@ if ( ! function_exists( 'miningtown_edit_link' ) ) :
 			sprintf(
 				wp_kses(
 					/* translators: %s: Post title. Only visible to screen readers. */
-					__( 'Edit <span class="screen-reader-text">%s</span>', 'mk2019' ),
+					__( 'Edit <span class="screen-reader-text">%s</span>', 'miningtown' ),
 					array(
 						'span' => array(
 							'class' => array(),
@@ -109,5 +109,22 @@ if ( ! function_exists( 'miningtown_edit_link' ) ) :
 			'<span class="edit-link">' . TwentyNineteen_SVG_Icons::get_svg( 'ui', 'edit', 16 ),
 			'</span>'
 		);
+	}
+endif;
+
+if ( ! function_exists( 'miningtown_comment_form' ) ) :
+	/**
+	 * Documentation for function.
+	 */
+	function miningtown_comment_form( $order ) {
+		if ( true === $order || strtolower( $order ) === strtolower( get_option( 'comment_order', 'asc' ) ) ) {
+
+			comment_form(
+				array(
+					'logged_in_as' => null,
+					'title_reply'  => null,
+				)
+			);
+		}
 	}
 endif;

@@ -9,7 +9,7 @@
  */
 
 add_action( 'after_setup_theme', function() {
-	
+
 	add_theme_support( 'editor-styles' );
 	add_theme_support( 'title-tag' );
 	add_editor_style( 'style-editor.css' );
@@ -113,7 +113,7 @@ add_action( 'after_setup_theme', function() {
  * - See: http://themeshaper.com/2014/08/13/how-to-add-google-fonts-to-wordpress-themes/
  */
 function miningtown_fonts_url() {
-	       
+
 	$font_families = array();
 	$font_families[] = 'Ubuntu:500';
 
@@ -133,7 +133,7 @@ function miningtown_fonts_url() {
 add_action( 'wp_enqueue_scripts', function() {
     // enqueue Google fonts, if necessary
     wp_enqueue_style( 'miningtown-fonts', miningtown_fonts_url(), array(), null );
-	
+
 	wp_enqueue_style(
 		'miningtown-style',
 		get_stylesheet_uri(),
@@ -149,7 +149,7 @@ add_action( 'init', function() {
     ] );
 } );
 
-add_action( 'widgets_init', function() { 
+add_action( 'widgets_init', function() {
 	register_sidebar( array(
 		'name'          => 'Footer Left',
 		'id'            => 'footer-left',
@@ -180,4 +180,7 @@ add_action( 'widgets_init', function() {
 } );
 
 require get_template_directory() . '/inc/class-varia-svg-icons.php';
+require get_template_directory() . '/inc/class-twentynineteen-walker-comment.php';
 require get_template_directory() . '/inc/template-tags.php';
+require get_template_directory() . '/inc/template-functions.php';
+
