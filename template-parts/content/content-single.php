@@ -5,7 +5,7 @@
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
  * @package miningtown
- * 
+ *
  * @since 1.0.0
  */
 
@@ -17,7 +17,8 @@
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 		<?php if ( ! is_page() ) : ?>
 		<div class="entry-meta">
-			<?php miningtown_entry_meta(); ?>
+			<?php miningtown_posted_on(); ?>
+			<?php miningtown_categories_list(); ?>
 		</div>
 		<?php endif; ?>
 	</header>
@@ -49,7 +50,8 @@
 	</div>
 
 	<footer class="entry-footer">
-		<?php miningtown_entry_footer(); ?>
+		<?php miningtown_tags_list(); ?>
+		<?php miningtown_edit_link(); ?>
 	</footer>
 
 	<?php if ( ! is_singular( 'attachment' ) ) : ?>

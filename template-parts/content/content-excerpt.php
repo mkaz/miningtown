@@ -5,7 +5,7 @@
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
  * @package miningtown
- * 
+ *
  * @since 1.0.0
  */
 
@@ -19,6 +19,10 @@
 		}
 		the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' );
 		?>
+		<div class="entry-meta">
+			<?php miningtown_posted_on(); ?>
+			<?php miningtown_categories_list(); ?>
+		</div>
 	</header>
 
 	<div class="entry-content">
@@ -26,6 +30,5 @@
 	</div>
 
 	<footer class="entry-footer">
-		<?php miningtown_entry_footer(); ?>
 	</footer>
 </article>

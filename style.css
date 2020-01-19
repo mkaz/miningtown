@@ -348,7 +348,7 @@ a {
 .site-main {
 	background-color: white;
 	min-height: 60vh;
-	padding-top:32px;
+	padding-top:48px;
 }
 
 .site-footer {
@@ -1334,16 +1334,14 @@ article {
 }
 
 article .entry-header {
-	order: 1;
 	margin: 0;
 }
 
-article .entry-content {
-	order: 3;
+article .entry-meta {
+	margin: 8px 0 0 0;
 }
 
 article .entry-footer {
-	order: 2;
 	margin: 0;
 }
 
@@ -1353,14 +1351,6 @@ body.single article .entry-header {
 
 body.single article .entry-title {
 	margin: 0;
-}
-
-body.single article .entry-meta {
-	margin: 8px 0 0 0;
-}
-
-body.single article .entry-footer {
-	display: none;
 }
 
 .data-table {
