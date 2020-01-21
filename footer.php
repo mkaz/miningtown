@@ -7,14 +7,44 @@
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
  * @package miningtown
- * 
+ *
  * @since 1.0.0
  */
+
+	$blog_info = get_bloginfo( 'name' );
 ?>
 
 	<?php if ( ! get_query_var('paged') ) : ?>
-		<section class="author-bio">
-			<?php dynamic_sidebar("author-bio"); ?>
+		<?php if ( is_active_sidebar( 'author-bio' ) ) : ?>
+			<section class="author-bio">
+				<?php dynamic_sidebar( 'author-bio' ); ?>
+			</section>
+		<?php endif; ?>
+
+		<section class="follow-block">
+			<div class="follow-header">
+				<h2> Follow <?php bloginfo( 'name' ); ?> </h2>
+			</div>
+			<?php if ( is_active_sidebar( 'follow-block' ) ) : ?>
+				<div class="follow-row">
+					<div class="follow-icon">
+						<?php echo TwentyNineteen_SVG_Icons::get_svg( 'miningtown', 'email', 32 ); ?>
+					</div>
+					<div class="follow-content">
+						<?php dynamic_sidebar( 'follow-block' ); ?>
+					</div>
+				</div>
+			<?php endif; ?>
+			<div class="follow-row">
+				<div class="follow-icon">
+					<a href="/feed" title="Subscribe to RSS">
+						<?php echo TwentyNineteen_SVG_Icons::get_svg( 'miningtown', 'rss', 32 ); ?>
+					</a>
+				</div>
+				<div class="follow-content">
+					<a href="/feed" title="Subscribe to RSS">RSS Feed</a>
+				</div>
+			</div>
 		</section>
 	<?php endif; ?>
 

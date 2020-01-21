@@ -316,6 +316,7 @@ a {
 /* Sized and Centered */
 .widget-area,
 .author-bio,
+.follow-block,
 .site-header,
 .site-main {
 	max-width: 872px;
@@ -327,6 +328,7 @@ a {
 @media only screen and (max-width: 560px) {
 	.widget-area,
 	.author-bio,
+	.follow-block,
 	.site-header,
 	.site-main {
 		padding: 16px;
@@ -363,6 +365,7 @@ a {
 .entry-content,
 .entry-footer,
 .author-bio,
+.follow-block,
 .widget-area {
 	margin-top: 0;
 	margin-bottom: 16px;
@@ -994,19 +997,29 @@ table th,
 	margin: 0;
 }
 
+section.follow-block,
 section.author-bio {
-	color: white;
 	border-radius: 16px;
-	background-color: rgba(200, 8, 8, 0.8);
 	padding: 2.0rem;
 	margin-top: 2.0rem;
 }
 @media only screen and (max-width: 872px) {
+	section.follow-block,
 	section.author-bio {
 		margin-left: 16px;
 		margin-right: 16px;
 	}
 }
+
+section.author-bio {
+	color: white;
+	background-color: rgba(200, 8, 8, 0.8);
+}
+
+section.follow-block {
+	background-color: white;
+}
+
 
 section.author-bio h2 {
 	color: white;
@@ -1032,6 +1045,26 @@ section.author-bio li {
 
 section.author-bio svg {
 	fill: white;
+}
+
+.follow-row {
+	display: flex;
+	align-items: center;
+}
+
+.follow-row:not(:last-of-type) {
+	border-bottom: 1px solid #CCCCCC;
+}
+
+.follow-icon {
+	width: 128px;
+	margin: 0 auto;
+	padding: 32px 16px;
+	fill: var(--color-accent);
+}
+.follow-content {
+	width: 100%;
+	padding: 16px 0;
 }
 
 
@@ -1433,6 +1466,10 @@ body.single article .entry-title {
 
 #comments > .comments-title:last-child {
   display: none;
+}
+
+.comment .says {
+	display: none;
 }
 
 .comment-form-flex {

@@ -177,7 +177,19 @@ add_action( 'widgets_init', function() {
 		'after_title'   => '</h2>',
 	) );
 
+	register_sidebar( array(
+		'name'          => 'Follow Block',
+		'id'            => 'follow-block',
+		'before_widget' => '<div>',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h2>',
+		'after_title'   => '</h2>',
+	) );
+
 } );
+
+// No says text
+add_filter( 'comment_author_says_text', function() { return ' '; } );
 
 require get_template_directory() . '/inc/class-varia-svg-icons.php';
 require get_template_directory() . '/inc/class-twentynineteen-walker-comment.php';
