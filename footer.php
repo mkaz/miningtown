@@ -26,7 +26,7 @@
 				<h2> Follow <?php bloginfo( 'name' ); ?> </h2>
 			</div>
 			<?php if ( is_active_sidebar( 'follow-block' ) ) : ?>
-				<div class="follow-row">
+				<div class="follow-row" id="blog_subscription-2">
 					<div class="follow-icon">
 						<?php echo TwentyNineteen_SVG_Icons::get_svg( 'miningtown', 'email', 32 ); ?>
 					</div>
