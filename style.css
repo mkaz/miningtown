@@ -339,7 +339,7 @@ a {
 	.follow-block,
 	.site-header,
 	.site-main {
-		padding: 16px;
+		padding: 1.0rem;
 	}
 }
 
@@ -356,9 +356,14 @@ a {
 }
 
 .site-main {
-	background-color: white;
 	min-height: 60vh;
 	padding-top: 2.0rem;
+}
+
+@media only screen and (max-width: 560px) {
+	.site-main {
+		padding-top: 1.0rem;
+	}
 }
 
 .site-footer {
@@ -913,15 +918,16 @@ table th,
 	margin-bottom: 4px;
 }
 
-@media only screen and (max-width: 560px){
-	.site-title {
-		font-size: 2.0rem;
-	}
-}
-
 .site-title img {
 	max-width: 256px;
 }
+
+@media only screen and (max-width: 560px){
+	.site-title img {
+		max-width: 192px;
+	}
+}
+
 
 .site-title a {
 	color: currentColor;
@@ -1008,23 +1014,22 @@ table th,
 	margin: 0;
 }
 
-section.follow-block,
-section.author-bio {
-	border-radius: 16px;
-	padding: 2.0rem;
-	margin-top: 2.0rem;
-}
-@media only screen and (max-width: 872px) {
-	section.follow-block,
-	section.author-bio {
-		margin-left: 16px;
-		margin-right: 16px;
-	}
-}
 
 section.author-bio {
 	color: white;
 	background-color: rgba(200, 8, 8, 0.8);
+	border-radius: 16px;
+	margin-top: 2.0rem;
+	margin-bottom: 2.0rem;
+}
+
+@media only screen and (max-width: 872px) {
+	section.author-bio {
+		margin-left: 16px;
+		margin-right: 16px;
+		padding: 1rem;
+	}
+
 }
 
 section.author-bio h2 {
@@ -1037,6 +1042,12 @@ section.author-bio img {
 	float: left;
 	margin: -32px 16px 16px 0;
 	border-radius: 64px;
+}
+
+@media only screen and (max-width: 560px) {
+	section.author-bio img {
+		margin-top: -72px;
+	}
 }
 
 section.author-bio ul {
@@ -1063,9 +1074,9 @@ section.author-bio svg {
 }
 
 .follow-icon {
-	width: 128px;
+	width: 4rem;
 	margin: 0 auto;
-	padding: 32px 16px 16px 16px;
+	padding: 32px 0 16px 0;
 	fill: var(--color-accent);
 }
 

@@ -2,12 +2,12 @@
  * These styles should be loaded by the Block Editor only
  */
 
- /** This is not being loaded by editor styles 
+ /** This is not being loaded by editor styles
    * so copied and pasted style.css
    */
    :root {
 	--system-font: -apple-system, BlinkMacSystemFont, Roboto, Oxygen, "Droid Sans", Ubuntu, Cantarell, "Fira Sans", "Helvetica Neue", sans-serif;
-	--main-font-family: var(--system-font);
+	--main-font-family: 'Droid Serif', Georgia, 'Bitstream Charter', serif;
     --main-font-size: 18px;
     --code-font-family: SFMono-Regular, Consolas, "Liberation Mono", Menlo, Inconsolata, "Courier New", monospace;
     --code-font-size: 0.8889rem;
@@ -21,7 +21,7 @@
     --h4-size: 1.4rem;
     --h5-size: 1.2rem;
 	--h6-size: 1.2rem;
-	
+
 	--color-main: #333333;
 	--color-dark: #152934;
 	--color-site-title: #B71C1C;
@@ -31,16 +31,13 @@
     --color-code: #8E24AA;
 }
 
-
-
-
 body {
 	color: #333333;
 	background-color: white;
 	font-family: var(--main-font-family);
 	font-size: var(--main-font-size);
 	font-weight: normal;
-	line-height: 1.25;
+	line-height: 1.5;
 	-moz-osx-font-smoothing: grayscale;
 	-webkit-font-smoothing: antialiased;
 }
