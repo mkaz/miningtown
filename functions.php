@@ -106,41 +106,16 @@ add_action( 'after_setup_theme', function() {
 
 } );
 
-
-/**
- * Add Google webfonts, if necessary
- *
- * - See: http://themeshaper.com/2014/08/13/how-to-add-google-fonts-to-wordpress-themes/
- */
-function miningtown_fonts_url() {
-
-	$font_families = array();
-	$font_families[] = 'Ubuntu:500';
-
-	$query_args = array(
-			'family' => implode( '|', $font_families ),
-			'subset' => 'latin,latin-ext',
-	);
-
-	$fonts_url = add_query_arg( $query_args, 'https://fonts.googleapis.com/css' );
-
-	return esc_url_raw( $fonts_url );
-}
-
 /**
  * Enqueue scripts and styles.
  */
 add_action( 'wp_enqueue_scripts', function() {
-    // enqueue Google fonts, if necessary
-    wp_enqueue_style( 'miningtown-fonts', miningtown_fonts_url(), array(), null );
-
 	wp_enqueue_style(
 		'miningtown-style',
 		get_stylesheet_uri(),
 		array(),
 		filemtime( get_stylesheet_directory() . '/style.css' )
 	);
-
 } );
 
 add_action( 'init', function() {

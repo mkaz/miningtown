@@ -7,7 +7,7 @@
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
  * @package miningtown
- * 
+ *
  * @since 1.0.0
  */
 ?><!doctype html>
@@ -24,7 +24,7 @@
 	<a class="skip-link screen-reader-text" href="#content">Skip to content</a>
 
 	<header id="masthead" class="site-header">
-		
+
 		<div class="site-branding">
 			<?php if ( has_custom_logo() ) : ?>
 				<div class="site-logo"><?php the_custom_logo(); ?></div>
@@ -33,7 +33,7 @@
 			<?php if ( ! empty( $blog_info ) ) : ?>
 				<h3 class="site-title">
 					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-						<?php bloginfo( 'name' ); ?>
+						<img src="<?php echo get_template_directory_uri(); ?>/mkaz.blog.svg" title="<?php echo esc_attr( $blog_info ); ?>"/>
 					</a>
 				</h3>
 				<p class="site-description">
@@ -41,7 +41,7 @@
 				</p>
 			<?php endif; ?>
 		</div>
-		
+
 		<?php if ( has_nav_menu('header-menu') ) : ?>
 			<nav class="main-navigation" aria-label="Main Navigation">
 				<?php wp_nav_menu( array( 'theme_location' => 'header-menu' ) ); ?>

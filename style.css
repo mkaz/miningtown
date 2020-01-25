@@ -25,12 +25,12 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
   */
 :root {
     --system-font: -apple-system, BlinkMacSystemFont, Roboto, Oxygen, "Droid Sans", Cantarell, "Fira Sans", "Helvetica Neue", sans-serif;
-	--main-font-family: var(--system-font);
+	--main-font-family: 'Droid Serif', Georgia, 'Bitstream Charter', serif;
     --main-font-size: 18px;
     --code-font-family: SFMono-Regular, Consolas, "Liberation Mono", Menlo, Inconsolata, "Courier New", monospace;
     --code-font-size: 0.8889rem;
 
-    --header-font-family: Ubuntu, -apple-system, BlinkMacSystemFont, Charcoal, Futura, sans-serif;
+    --header-font-family: 'Droid Serif', Georgia, serif;
     --blockquote-font-family: 'Droid Serif', Georgia, serif;
 
     --h1-size: 1.5555rem;
@@ -46,6 +46,8 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
     --color-hover: red;
     --color-accent: #B71C1C;;
     --color-code: #8E24AA;
+
+	--color-site: #0F4C81; /* Pantone Classic Blue */
 }
 
 html {
@@ -53,7 +55,7 @@ html {
 	box-sizing: border-box;
 	font-family: var(--main-font-family);
 	font-size: var(--main-font-size);
-	line-height: 1.25;
+	line-height: 1.5;
 	padding: 0;
 	margin: 0;
 	-moz-osx-font-smoothing: grayscale;
@@ -66,11 +68,17 @@ body {
 	font-weight: normal;
 	color: var(--color-main);
 	text-align: left;
-	background-color: #0F4C81; /* Pantone Classic Blue */
+	border: 16px solid var(--color-site);
 	padding: 0;
 	margin: 0;
 	-moz-osx-font-smoothing: grayscale;
 	-webkit-font-smoothing: antialiased;
+}
+
+@media only screen and (max-width: 560px) {
+	body {
+		border: 2px solid var(--color-site);
+	}
 }
 
 ::selection {
@@ -350,13 +358,13 @@ a {
 .site-main {
 	background-color: white;
 	min-height: 60vh;
-	padding-top:48px;
+	padding-top: 2.0rem;
 }
 
 .site-footer {
 	width: 100%;
-	margin: 16px 0 8px 0;
-	padding: 8px;
+	margin: 16px 0 0 0;
+	padding: 16px;
 	background-color: #CCCCCC;
 }
 
@@ -634,7 +642,7 @@ h4, h4 a,
 h5, h5 a,
 h6, h6 a {
 	font-family: var(--header-font-family);
-	font-weight: 500;
+	font-weight: 700;
 	color: var(--color-main);
 	clear: both;
 	margin: 0;
@@ -645,7 +653,7 @@ h1, .h1 {
 	font-size: var(--h1-size);
 	letter-spacing: normal;
 	line-height: 1.125;
-	margin: 0.67em 0;
+	margin: 0 0 0.67em 0;
 }
 
 h2, .h2 {
@@ -709,7 +717,6 @@ ol {
 }
 
 dt {
-	font-family: var(--system-font);
 	font-weight: bold;
 }
 
@@ -895,25 +902,31 @@ table th,
 
 .site-title {
 	display: inline-block;
-	font-family: var(--header-font-family);
+	font-family: Ubuntu, sans-serif;
 	font-size: 2.8rem;
 	font-weight: 700;
-	color: white;
+	color: var(--color-site);
 	letter-spacing: normal;
 	line-height: 1;
 	padding-bottom: 8px;
 	border-bottom: 2px solid var(--color-accent);
-	margin-bottom: 8px;
+	margin-bottom: 4px;
 }
+
 @media only screen and (max-width: 560px){
 	.site-title {
 		font-size: 2.0rem;
 	}
 }
 
+.site-title img {
+	max-width: 256px;
+}
+
 .site-title a {
 	color: currentColor;
-	font-weight: 700;
+	font-family: inherit;
+	font-weight: inherit;
 }
 
 .site-title a:link, .site-title a:visited {
@@ -925,9 +938,8 @@ table th,
 }
 
 .site-description {
-	font-size: 0.9rem;
+	font-size: 1.0rem;
 	opacity: 0.85;
-	color: white;
 	margin: 0;
 }
 
@@ -952,8 +964,7 @@ table th,
 
 .main-navigation a {
 	display: block;
-	font-family: var(--main-font-family);
-	font-size: 0.85rem;
+	font-size: 0.83333rem;
 	font-weight: normal;
 	padding: 0 0 0 16px;
 }
@@ -1015,11 +1026,6 @@ section.author-bio {
 	color: white;
 	background-color: rgba(200, 8, 8, 0.8);
 }
-
-section.follow-block {
-	background-color: white;
-}
-
 
 section.author-bio h2 {
 	color: white;
@@ -1100,7 +1106,7 @@ section.author-bio svg {
 }
 
 .footer-navigation .footer-menu {
-	color: #767676;
+	color: #666666;
 	padding-left: 0;
 	margin-left: -16px;
 	margin-right: -16px;
@@ -1120,7 +1126,7 @@ section.author-bio svg {
 
 .footer-navigation .footer-menu a {
 	font-family: var(--main-font-family);
-	font-size: 0.8rem;
+	font-size: 0.8333rem;
 	font-weight: normal;
 	padding: 16px;
 	color: currentColor;
@@ -1239,6 +1245,7 @@ section.author-bio svg {
 
 /* Next/Previous navigation */
 .post-navigation .meta-nav {
+	font-family: var(--system-font);
 	font-size: 0.8rem;
 }
 
@@ -1332,22 +1339,7 @@ aside {
 }
 
 .widget h5 {
-	color: white;
     margin-bottom: 8px;
-}
-
-/* links on blue background */
-.main-navigation a,
-.main-navigation a:link,
-.main-navigation a:visited,
-.widget a,
-.widget a:visited {
-	color: #CCCCCC;
-}
-
-.main-navigation a:hover,
-.widget a:hover {
-	color: #FFFE89;
 }
 
 .widget .profile {
@@ -1415,6 +1407,16 @@ body.single article .entry-title {
 
 .data-table {
     font-size: 0.85rem;
+}
+
+.follow-block,
+.follow-header h2,
+.widget h5,
+h5.page-title,
+.edit-link,
+.comments-title,
+.comment-reply-link {
+	font-family: var(--system-font);
 }
 
 /* Comments */
