@@ -909,14 +909,9 @@ table th,
 
 .site-title {
 	display: inline-block;
-	font-family: Ubuntu, sans-serif;
-	font-size: 2.8rem;
-	font-weight: 700;
-	color: var(--color-site);
-	letter-spacing: normal;
 	line-height: 1;
 	padding-bottom: 8px;
-	border-bottom: 2px solid var(--color-accent);
+	border-bottom: 4px solid var(--color-accent);
 	margin-bottom: 4px;
 }
 
@@ -925,11 +920,14 @@ table th,
 }
 
 @media only screen and (max-width: 560px){
+	.site-title {
+		padding-bottom: 4px;
+	}
+
 	.site-title img {
 		max-width: 192px;
 	}
 }
-
 
 .site-title a {
 	color: currentColor;
@@ -970,9 +968,16 @@ table th,
 	display: inline-block;
 }
 
+@media only screen and (max-width: 560px) {
+	.main-navigation ul.menu li {
+		display: block;
+		margin-bottom: 8px;
+	}
+}
+
 .main-navigation a {
 	display: block;
-	font-size: 0.83333rem;
+	font-size: 0.8888rem;
 	font-weight: normal;
 	padding: 0 0 0 16px;
 }
