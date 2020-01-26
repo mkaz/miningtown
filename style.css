@@ -26,7 +26,6 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 :root {
     --system-font: -apple-system, BlinkMacSystemFont, Roboto, Oxygen, "Droid Sans", Cantarell, "Fira Sans", "Helvetica Neue", sans-serif;
 	--main-font-family: 'Droid Serif', Georgia, 'Bitstream Charter', serif;
-    --main-font-size: 18px;
     --code-font-family: SFMono-Regular, Consolas, "Liberation Mono", Menlo, Inconsolata, "Courier New", monospace;
     --code-font-size: 0.8889rem;
 
@@ -41,7 +40,6 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	--h6-size: 1.1111rem;
 
 	--color-main: #333333;
-	--color-dark: #152934;
     --color-link: #1565C0;
     --color-hover: red;
     --color-accent: #B71C1C;;
@@ -54,7 +52,7 @@ html {
 	-webkit-text-size-adjust: 100%;
 	box-sizing: border-box;
 	font-family: var(--main-font-family);
-	font-size: var(--main-font-size);
+	font-size: 18px;
 	line-height: 1.5;
 	padding: 0;
 	margin: 0;
@@ -76,6 +74,10 @@ body {
 }
 
 @media only screen and (max-width: 560px) {
+	html {
+		font-size: 20px;
+	}
+
 	body {
 		border: 2px solid var(--color-site);
 	}
