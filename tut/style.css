@@ -1,0 +1,141 @@
+/*
+ * CSS for Tutorial pages
+*/
+
+body.page-template-page-tut .container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+body.page-template-page-tut header {
+  flex: 1 1 100%;
+}
+
+body.page-template-page-tut aside#sidebar {
+  display: block;
+  flex: 1 2 25%;
+  max-width: 15rem;
+  min-width: 9rem;
+}
+
+body.page-template-page-tut main {
+  max-width: 45rem;
+  min-width: 30rem;
+  min-height: 100vh;
+  flex: 2 0 75%;
+}
+
+body.page-template-page-tut footer {
+  flex: 1 0 100%;
+}
+
+@media screen and (min-width: 40rem) {
+  body.page-template-page-tut main {
+    padding-bottom: 5.0rem;
+    padding-left: 2.6667rem;
+    padding-right: 2.6667rem;
+    padding-top: 1.7778rem;
+  }
+}
+
+@media screen and (max-width: 40rem) {
+  body.page-template-page-tut aside#sidebar {
+    display: none;
+  }
+
+  body.page-template-page-tut main {
+    min-width: 16rem;
+    min-height: 100vh;
+    flex: 3 0 75%;
+    padding: 1.7778rem;
+  }
+}
+
+body.page-template-page-tut article {
+	border-bottom: none;
+}
+
+body.page-template-page-tut article nav {
+	margin-top: 2.0rem;
+	display: flex;
+	justify-content: space-between;
+}
+
+body.page-template-page-tut header {
+  background-color: #0F4C81;
+  color: #FFFFFF;
+  padding: 0 1.0rem 1.0rem 1.0rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+div.site-logo {
+	margin-right: 4.0rem;
+}
+
+@media screen and (max-width: 40rem) {
+	div.site-logo {
+		display: none;
+	}
+}
+
+body.page-template-page-tut header svg {
+	width: 192px;
+	fill: white;
+}
+
+body.page-template-page-tut header a:hover svg {
+	width: 192px;
+	fill: #FFF89E;
+}
+
+body.page-template-page-tut header h3 {
+  color: white;
+  font-size: 2.0rem;
+  margin: 0 0 12px 0;
+}
+
+body.page-template-page-tut header a, body.page-template-page-tut header a:visited {
+  color: currentColor;
+  text-decoration: none;
+}
+
+body.page-template-page-tut aside#sidebar {
+  background-color: #EEEEEE;
+  color: #333333;
+  margin-top: 0px;
+  margin-bottom: 0px
+}
+
+body.page-template-page-tut aside#sidebar nav {
+  padding: 2.0rem 1.0rem;
+}
+
+body.page-template-page-tut aside#sidebar  nav h3 {
+	font-size: 18px;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Droid Sans", Roboto, Cantarell, "Helvetica Neue", sans-serif;
+	margin-bottom: 0.5rem;
+}
+
+body.page-template-page-tut aside#sidebar nav ul {
+  margin-left: 0;
+  padding-left: 0;
+  list-style-type: none;
+}
+
+body.page-template-page-tut main {
+	border-bottom: 16px solid #EEEEEE;
+}
+
+body.page-template-page-tut span.sidenote {
+  border: 1px solid #CCCCCC;
+  display: block;
+  float: right;
+  font-size: 0.83333rem;
+  margin: 8px 0 8px 8px;
+  max-width: 9rem;
+  padding: 8px;
+}
+
