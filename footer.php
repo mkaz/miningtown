@@ -37,7 +37,7 @@
 			<?php endif; ?>
 			<div class="follow-row">
 				<div class="follow-icon">
-					<a href="/feed" title="Subscribe to RSS">
+					<a href="/feed/" title="Subscribe to RSS">
 						<?php echo TwentyNineteen_SVG_Icons::get_svg( 'miningtown', 'rss', 32 ); ?>
 					</a>
 				</div>
