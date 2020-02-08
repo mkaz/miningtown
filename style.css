@@ -400,7 +400,7 @@ blockquote {
 }
 
 blockquote p {
-	font-size: 1.728rem;
+	font-size: 1.0rem;
 	letter-spacing: normal;
 	line-height: 1.125;
 }
@@ -752,7 +752,7 @@ dd {
 
 .wp-block-quote p {
 	font-family: var(--blockquote-font-family);
-	font-size: 1.2rem;
+	font-size: 1.0rem;
 	letter-spacing: normal;
 	line-height: 1.25;
     color: var(--color-accent);
@@ -1229,7 +1229,7 @@ section.author-bio svg {
 }
 
 .entry-content li {
-	margin-bottom: 1.0rem;
+	margin-bottom: 0.0rem;
 }
 
 .entry-content ol {
@@ -1756,4 +1756,18 @@ h5.page-title,
   display: block;
   width: 100%;
 }
+
+/* added here to avoid extra css file load */
+.wp-block-a8c-bauhaus-centenary { padding: 2rem 0; display: flex; flex-direction: column; justify-content: center; text-align: center; border-radius: 4px; }
+.wp-block-a8c-bauhaus-centenary .forms, .wp-block-a8c-bauhaus-centenary .year, .wp-block-a8c-bauhaus-centenary .ribbon { padding: 0 2rem; }
+.wp-block-a8c-bauhaus-centenary .forms { display: flex; justify-content: center; align-content: center; }
+.wp-block-a8c-bauhaus-centenary .forms svg { width: auto; margin-right: 1rem; }
+.wp-block-a8c-bauhaus-centenary .ribbon { display: flex; }
+.wp-block-a8c-bauhaus-centenary .ribbon svg { height: 100%; }
+.wp-block-a8c-bauhaus-centenary .ribbon svg:first-child { flex-grow: 0; }
+.wp-block-a8c-bauhaus-centenary .ribbon svg:last-child { flex-grow: 1; }
+.wp-block-a8c-bauhaus-centenary.alignfull { border-radius: 0; }
+.wp-block-a8c-bauhaus-centenary.alignfull .ribbon { padding: 0; }
+.wp-block-a8c-bauhaus-centenary.alignfull .ribbon svg:first-child { flex-grow: 1; }
+.wp-block-a8c-bauhaus-centenary.alignfull .ribbon svg:last-child { flex-grow: 3; }
 
