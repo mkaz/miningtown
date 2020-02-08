@@ -110,12 +110,37 @@ add_action( 'after_setup_theme', function() {
  * Enqueue scripts and styles.
  */
 add_action( 'wp_enqueue_scripts', function() {
+
+	if ( is_page_template( 'page-tut.php' ) ) {
+		wp_enqueue_style(
+			'miningtown-tutorial-style',
+			get_stylesheet_directory_uri() . '/tut/style.css',
+			array(),
+			filemtime( get_stylesheet_directory() . '/tut/style.css' )
+		);
+
+		wp_enqueue_style(
+			'miningtown-asciinema-style',
+			get_stylesheet_directory_uri() . '/tut/asciinema/asciinema-player.css'
+		);
+
+		wp_enqueue_script(
+			'miningtown-asciinema-script',
+			get_stylesheet_directory_uri() . '/tut/asciinema/asciinema-player.js',
+			array(),
+			filemtime( get_stylesheet_directory() . '/tut/asciinema/asciinema-player.js' ),
+			true // in footer
+		);
+
+	}
+
 	wp_enqueue_style(
 		'miningtown-style',
 		get_stylesheet_uri(),
 		array(),
 		filemtime( get_stylesheet_directory() . '/style.css' )
 	);
+
 } );
 
 add_action( 'init', function() {
