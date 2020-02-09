@@ -191,8 +191,23 @@ add_action( 'widgets_init', function() {
 // No says text
 add_filter( 'comment_author_says_text', function() { return ' '; } );
 
+// Dont include Jetpack CSS
+add_filter( 'jetpack_sharing_counts', '__return_false', 99 );
+add_filter( 'jetpack_implode_frontend_css', '__return_false', 99 );
+add_action( 'wp_print_styles', function() {
+	wp_deregister_style( 'jetpack-subscriptions' );
+});
+
+add_action( 'wp_print_scripts', function() {
+	if ( ! is_admin() ) {
+		wp_deregister_script( 'jquery' );
+	};
+});
+
 require get_template_directory() . '/inc/class-varia-svg-icons.php';
 require get_template_directory() . '/inc/class-twentynineteen-walker-comment.php';
 require get_template_directory() . '/inc/template-tags.php';
 require get_template_directory() . '/inc/template-functions.php';
+
+
 
