@@ -23,10 +23,11 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
   * No package.json required.
   * No node_moduels required.
   */
+
 :root {
     --system-font: -apple-system, BlinkMacSystemFont, Roboto, Oxygen, "Droid Sans", Cantarell, "Fira Sans", "Helvetica Neue", sans-serif;
 	--main-font-family: 'Droid Serif', Georgia, 'Bitstream Charter', serif;
-    --code-font-family: SFMono-Regular, Consolas, "Liberation Mono", Menlo, Inconsolata, "Courier New", monospace;
+    --code-font-family: Hack, SFMono-Regular, Consolas, "Liberation Mono", Menlo, Inconsolata, "Courier New", monospace;
     --code-font-size: 0.8889rem;
 
     --header-font-family: 'Droid Serif', Georgia, serif;
@@ -329,8 +330,8 @@ a {
 .follow-block,
 .site-header,
 .site-main {
-	max-width: 872px;
-	padding: 64px 96px;
+	max-width: 744px;
+	padding: 64px 32px;
 	margin-left: auto;
 	margin-right: auto;
 }
@@ -349,7 +350,6 @@ a {
 	margin-top: 0;
 	margin-bottom: 0;
 	display: flex;
-	padding: 32px;
 }
 
 .site-branding {
@@ -383,7 +383,6 @@ a {
 .follow-block,
 .widget-area {
 	margin-top: 0;
-	margin-bottom: 16px;
 }
 
 .entry-content h2,
@@ -391,7 +390,7 @@ a {
 .entry-content h4,
 .entry-content h5,
 .entry-content h6 {
-    margin-top: 2.0rem;
+    margin-top: 2.5rem;
     margin-bottom: 1.0rem;
 }
 
@@ -606,6 +605,14 @@ input.has-focus[type="submit"],
 	font-size: var(--code-font-size);
 	padding: 16px;
 	border-color: #DDDDDD;
+}
+
+/* code syntax block */
+.wp-block-code code[class*="language-"],
+.wp-block-code pre[class*="language-"],
+.wp-block-code pre code {
+	font-family: var(--code-font-family);
+	font-size: 0.8333rem;
 }
 
 .wp-block-code pre {
@@ -824,12 +831,21 @@ table,
 	width: 100%;
 	min-width: 240px;
 	border-collapse: collapse;
-    font-size: 0.85rem;
+    font-size: 0.8888rem;
+	border-bottom: 1px solid;
+	margin-bottom: 2.0rem;
 }
 
 table th,
 .wp-block-table th {
 	font-family: var(--system-font);
+	border-top: 1px solid;
+	border-bottom: 1px solid;
+}
+
+.wp-block-table tr:last-of-type td,
+table tr:last-of-type td {
+	padding-bottom: 16px;
 }
 
 table td,
@@ -837,7 +853,6 @@ table th,
 .wp-block-table td,
 .wp-block-table th {
 	padding: 8px;
-	border: 1px solid;
 	word-break: break-all;
 }
 
