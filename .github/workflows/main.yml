@@ -1,5 +1,5 @@
 on: push
-name: Publish Website Dry Run
+name: Publish Website
 jobs:
   FTP-Deploy-Action:
     name: FTP-Deploy-Action
@@ -15,4 +15,4 @@ jobs:
         ftp-server: sftp://sftp.pressable.com/
         ftp-username: ${{ secrets.SFTP_USERNAME }}
         ftp-password: ${{ secrets.SFTP_PASSWORD }}
-        git-ftp-args: --dry-run --remote-root wp-content/themes/miningtown/
+        git-ftp-args: --remote-root wp-content/themes/miningtown/
