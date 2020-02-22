@@ -7,13 +7,13 @@
    */
    :root {
 	--system-font: -apple-system, BlinkMacSystemFont, Roboto, Oxygen, "Droid Sans", Ubuntu, Cantarell, "Fira Sans", "Helvetica Neue", sans-serif;
-	--main-font-family: 'Droid Serif', Georgia, 'Bitstream Charter', serif;
+	--main-font-family: 'Droid Serif', Cambria, 'Bitstream Charter', 'Big Caslon', serif;
     --main-font-size: 18px;
     --code-font-family: SFMono-Regular, Consolas, "Liberation Mono", Menlo, Inconsolata, "Courier New", monospace;
     --code-font-size: 0.8889rem;
 
-    --header-font-family: Ubuntu, -apple-system, BlinkMacSystemFont, Charcoal, Futura, sans-serif;
-    --blockquote-font-family: 'Droid Serif', Georgia, serif;
+    --header-font-family: 'Droid Serif', Cambria, 'Bitstream Charter', 'Big Caslon', serif;
+    --blockquote-font-family: 'Droid Serif', Cambria, 'Bitstream Charter', 'Big Caslon', serif;
 
     --h1-size: 1.8rem;
     --h2-size: 1.6rem;
