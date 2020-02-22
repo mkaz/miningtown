@@ -26,12 +26,12 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 
 :root {
     --system-font: -apple-system, BlinkMacSystemFont, Roboto, Oxygen, "Droid Sans", Cantarell, "Fira Sans", "Helvetica Neue", sans-serif;
-	--main-font-family: 'Droid Serif', Georgia, 'Bitstream Charter', serif;
+	--main-font-family: 'Droid Serif', Cambria, 'Bitstream Charter', 'Big Caslon', serif;
     --code-font-family: Hack, SFMono-Regular, Consolas, "Liberation Mono", Menlo, Inconsolata, "Courier New", monospace;
     --code-font-size: 0.8889rem;
 
-    --header-font-family: 'Droid Serif', Georgia, serif;
-    --blockquote-font-family: 'Droid Serif', Georgia, serif;
+    --header-font-family: 'Droid Serif', Cambria, 'Bitstream Charter', 'Big Caslon', serif;
+    --blockquote-font-family: 'Droid Serif', Cambria, 'Bitstream Charter', 'Big Caslon', serif;
 
     --h1-size: 1.5555rem;
     --h2-size: 1.3889rem;
@@ -1179,7 +1179,7 @@ section.author-bio svg {
 	color: #767676;
 	clear: both;
 	float: none;
-	font-size: 0.8rem;
+	font-size: 0.7778rem;
 	display: block;
 }
 
@@ -1187,12 +1187,6 @@ section.author-bio svg {
 .entry-footer > span {
 	display: inline-block;
 	margin-right: 16px;
-}
-
-.entry-meta > span > *,
-.entry-footer > span > * {
-	display: inline-block;
-	vertical-align: middle;
 }
 
 .entry-meta > span:last-child,
