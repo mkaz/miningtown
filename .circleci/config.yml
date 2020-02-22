@@ -15,5 +15,5 @@ jobs:
       - checkout
       - run:
           name: Send Via SFTP
-          command: lftp sftp://${username}:${password}@${hostname} -e "mirror -v -R --exclude .git/ --exclude .circleci/ ./ ${site_name}/wp-content/themes/${theme}; quit"
+          command: lftp sftp://${username}:${password}@${hostname} -e "mirror -v -R --exclude .git/ --exclude .circleci/ ./ wp-content/themes/${theme}; quit"
 
