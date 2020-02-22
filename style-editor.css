@@ -15,12 +15,12 @@
     --header-font-family: 'Droid Serif', Cambria, 'Bitstream Charter', 'Big Caslon', serif;
     --blockquote-font-family: 'Droid Serif', Cambria, 'Bitstream Charter', 'Big Caslon', serif;
 
-    --h1-size: 1.8rem;
-    --h2-size: 1.6rem;
-    --h3-size: 1.4rem;
-    --h4-size: 1.4rem;
-    --h5-size: 1.2rem;
-	--h6-size: 1.2rem;
+    --h1-size: 1.7778rem;
+    --h2-size: 1.5556rem;
+    --h3-size: 1.3889rem;
+    --h4-size: 1.3889rem;
+    --h5-size: 1.2222rem;
+	--h6-size: 1.2222rem;
 
 	--color-main: #333333;
 	--color-dark: #152934;
@@ -250,37 +250,37 @@ object {
 }
 
 .wp-block-heading h1, h1, .h1 {
-	font-size: 2.2rem;
+	font-size: var(--h1-size);
 	letter-spacing: normal;
 	line-height: 1.125;
 }
 
 .wp-block-heading h2, h2, .h2 {
-	font-size: 2.0rem;
+	font-size: var(--h2-size);
 	letter-spacing: normal;
 	line-height: 1.125;
 }
 
 .wp-block-heading h3, h3, .h3 {
-	font-size: 1.8rem;
+	font-size: var(--h3-size);
 	letter-spacing: normal;
 	line-height: 1.125;
 }
 
 .wp-block-heading h4, h4, .h4 {
-	font-size: 1.6rem;
+	font-size: var(--h4-size);
 	letter-spacing: normal;
 	line-height: 1.125;
 }
 
 .wp-block-heading h5, h5, .h5 {
-	font-size: 1.4rem;
+	font-size: var(--h5-size);
 	letter-spacing: normal;
 	line-height: 1.125;
 }
 
 .wp-block-heading h6, h6, .h6 {
-	font-size: 1.2rem;
+	font-size: var(--h6-size);
 	letter-spacing: normal;
 	line-height: 1.125;
 }
@@ -355,7 +355,7 @@ p.has-background:not(.has-background-background-color) a {
 }
 
 .wp-block-quote.is-style-large p, .wp-block-quote.is-large p {
-	font-size: 2.0736rem;
+	font-size: 2.0rem;
 	letter-spacing: normal;
 	line-height: 1.125;
 }
