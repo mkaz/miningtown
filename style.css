@@ -1766,6 +1766,16 @@ h5.page-title,
   width: 100%;
 }
 
+.wp-block-group.has-background {
+	padding: 8px 30px 16px 30px;
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.wp-block-group.has-background h3 {
+	margin-top: 0.5rem;
+}
+
 /* added here to avoid extra css file load */
 .wp-block-a8c-bauhaus-centenary { padding: 2rem 0; display: flex; flex-direction: column; justify-content: center; text-align: center; border-radius: 4px; }
 .wp-block-a8c-bauhaus-centenary .forms, .wp-block-a8c-bauhaus-centenary .year, .wp-block-a8c-bauhaus-centenary .ribbon { padding: 0 2rem; }
