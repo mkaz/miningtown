@@ -1772,8 +1772,9 @@ h5.page-title,
 	margin-bottom: 0;
 }
 
+.wp-block-group.has-background h2,
 .wp-block-group.has-background h3 {
-	margin-top: 0.5rem;
+	margin-top: 1.0rem;
 }
 
 /* added here to avoid extra css file load */
