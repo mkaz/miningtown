@@ -53,7 +53,7 @@ html {
 	-webkit-text-size-adjust: 100%;
 	box-sizing: border-box;
 	font-family: var(--main-font-family);
-	font-size: 18px;
+	font-size: 20px;
 	line-height: 1.5;
 	padding: 0;
 	margin: 0;
@@ -75,9 +75,6 @@ body {
 }
 
 @media only screen and (max-width: 560px) {
-	html {
-		font-size: 20px;
-	}
 
 	body {
 		border: 2px solid var(--color-site);
@@ -330,7 +327,7 @@ a {
 .follow-block,
 .site-header,
 .site-main {
-	max-width: 744px;
+	max-width: 800px;
 	padding: 64px 32px;
 	margin-left: auto;
 	margin-right: auto;
