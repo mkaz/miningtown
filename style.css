@@ -29,6 +29,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	--main-font-family: 'Droid Serif', Cambria, 'Bitstream Charter', 'Big Caslon', serif;
     --code-font-family: Hack, SFMono-Regular, Consolas, "Liberation Mono", Menlo, Inconsolata, "Courier New", monospace;
     --code-font-size: 0.8889rem;
+	--font-mono: Consolas, Menlo, Inconsolata, 'Droid Sans Mono', SFMono-Regular, 'Courier New', monospace;
 
     --header-font-family: 'Droid Serif', Cambria, 'Bitstream Charter', 'Big Caslon', serif;
     --blockquote-font-family: 'Droid Serif', Cambria, 'Bitstream Charter', 'Big Caslon', serif;
@@ -72,6 +73,8 @@ body {
 	margin: 0;
 	-moz-osx-font-smoothing: grayscale;
 	-webkit-font-smoothing: antialiased;
+	background-color: var(--color-site);
+	/* background-color: #d2e1ee; */
 }
 
 @media only screen and (max-width: 560px) {
@@ -327,10 +330,21 @@ a {
 .follow-block,
 .site-header,
 .site-main {
-	max-width: 800px;
-	padding: 64px 32px;
+	max-width: 864px;
+	padding: 64px;
 	margin-left: auto;
 	margin-right: auto;
+	background-color: white;
+}
+
+@media only screen and (max-width: 864px) {
+	.widget-area,
+	.author-bio,
+	.follow-block,
+	.site-header,
+	.site-main {
+		padding: 2.0rem;
+	}
 }
 
 @media only screen and (max-width: 560px) {
@@ -356,7 +370,7 @@ a {
 
 .site-main {
 	min-height: 60vh;
-	padding-top: 2.0rem;
+	padding-top: 0rem;
 }
 
 @media only screen and (max-width: 560px) {
@@ -1049,6 +1063,18 @@ section.author-bio {
 		padding: 1rem;
 	}
 
+}
+
+ul.post-list {
+	list-style-type: none;
+	margin-left: 0;
+	padding-left: 0;
+}
+/* Home */
+span.posted-on {
+	color: #666666;
+	font-size: 0.8888rem;
+	font-family: var(--font-mono);
 }
 
 section.author-bio h2 {

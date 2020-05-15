@@ -10,7 +10,7 @@
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
  * @package miningtown
- * 
+ *
  * @since 1.0.0
  */
 
@@ -22,11 +22,11 @@ get_header(); ?>
 	<?php if ( have_posts() ) : ?>
 
 		<h5 class="page-title"> Articles </h5>
-
+		<ul class="post-list">
 		<?php
 		while ( have_posts() ) :
 			the_post();
-			get_template_part( 'template-parts/content/content', 'excerpt' );
+			get_template_part( 'template-parts/content/content', 'home' );
 		endwhile;
 
 		miningtown_the_posts_navigation();
@@ -37,7 +37,7 @@ get_header(); ?>
 
 	endif;
 	?>
-	
+	</ul>
 </main>
 
 <?php get_footer();
