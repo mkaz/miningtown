@@ -1026,18 +1026,25 @@ table th,
 .author-bio a,
 .site-info a {
 	color: var(--color-footer);
+	fill: var(--color-footer);
 }
 
 .widget-area a:visited,
 .author-bio a:visited,
 .site-info a:link, .site-info a:visited {
 	color: var(--color-footer);
+	fill: var(--color-footer);
 }
 
 .widget-area a:hover,
 .author-bio a:hover,
 .site-info a:hover {
 	color: var(--color-hover);
+	fill: var(--color-footer);
+}
+
+li.wp-social-link {
+	margin-right: 1.0rem;
 }
 
 .page-header {
