@@ -48,6 +48,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
     --color-code: #8E24AA;
 
 	--color-site: #0F4C81; /* Pantone Classic Blue */
+	--color-footer: #FDD935;
 }
 
 html {
@@ -1003,7 +1004,7 @@ table th,
 }
 
 .site-info {
-	color: rgb(253, 217, 53);
+	color: var(--color-footer);
 	font-family: var(--system-font);
 	font-size: 0.60rem;
 }
@@ -1021,14 +1022,20 @@ table th,
 	font-weight: bold;
 }
 
+.widget-area a,
+.author-bio a,
 .site-info a {
-	color: currentColor;
+	color: var(--color-footer);
 }
 
+.widget-area a:visited,
+.author-bio a:visited,
 .site-info a:link, .site-info a:visited {
-	color: currentColor;
+	color: var(--color-footer);
 }
 
+.widget-area a:hover,
+.author-bio a:hover,
 .site-info a:hover {
 	color: var(--color-hover);
 }
@@ -1275,10 +1282,30 @@ span.posted-on {
 	}
 }
 
-aside {
-	margin-top: 32px;
-	margin-bottom: 64px;
+.author-bio {
+	max-width: 360px;
+	color: #CCCCCC;
+	margin-bottom: 2.0rem;
 }
+
+.author-bio img {
+	width: 128px;
+	height: 128px;
+	border-radius: 64px;
+	margin: 0 1.5rem 1.5rem 0;
+	float: left;
+}
+
+.widget-area h5,
+.author-bio h3 {
+	color: var(--color-footer);
+	display: inline-block;
+}
+
+.author-bio p {
+	text-align: justify;
+}
+
 
 .widget-area {
 	display: flex;
