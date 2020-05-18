@@ -13,45 +13,18 @@
 
 	$blog_info = get_bloginfo( 'name' );
 ?>
-
-	<?php if ( ! get_query_var('paged') ) : ?>
-		<?php if ( is_active_sidebar( 'author-bio' ) ) : ?>
-			<section class="author-bio">
-				<?php dynamic_sidebar( 'author-bio' ); ?>
-			</section>
-		<?php endif; ?>
-
-		<section class="follow-block">
-			<div class="follow-header">
-				<h2> Follow <?php bloginfo( 'name' ); ?> </h2>
-			</div>
-			<?php if ( is_active_sidebar( 'follow-block' ) ) : ?>
-				<div class="follow-row" id="blog_subscription-2">
-					<div class="follow-icon">
-						<?php echo TwentyNineteen_SVG_Icons::get_svg( 'miningtown', 'email', 32 ); ?>
-					</div>
-					<div class="follow-content">
-						<?php dynamic_sidebar( 'follow-block' ); ?>
-					</div>
-				</div>
-			<?php endif; ?>
-			<div class="follow-row">
-				<div class="follow-icon">
-					<a href="/feed/" title="Subscribe to RSS">
-						<?php echo TwentyNineteen_SVG_Icons::get_svg( 'miningtown', 'rss', 32 ); ?>
-					</a>
-				</div>
-				<div class="follow-content">
-					<a href="/feed" title="Subscribe to RSS">RSS Feed</a>
-				</div>
-			</div>
-		</section>
-	<?php endif; ?>
-
 </div>
 
-	<aside>
+
+	<footer id="colophon" class="site-footer">
+
 		<div class="widget-area">
+			<?php if ( is_active_sidebar( 'author-bio' ) ) : ?>
+				<section class="author-bio">
+					<?php dynamic_sidebar( 'author-bio' ); ?>
+				</section>
+			<?php endif; ?>
+
 			<div class="widget-section">
 				<?php dynamic_sidebar("footer-left"); ?>
 			</div>
@@ -59,9 +32,7 @@
 				<?php dynamic_sidebar("footer-right"); ?>
 			</div>
 		</div>
-	</aside>
 
-	<footer id="colophon" class="site-footer">
 		<?php
 		if ( function_exists( 'the_privacy_policy_link' ) ) {
 			the_privacy_policy_link( '', '<span role="separator" aria-hidden="true"></span>' );
