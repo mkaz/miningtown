@@ -10,6 +10,10 @@
  *
  * @since 1.0.0
  */
+
+ // switch logo for pride month
+$logo = ( date("n") === "6" ) ? "mkaz.blog-pride.svg" : "mkaz.blog.svg";
+
 ?><!doctype html>
 <html <?php language_attributes(); ?>>
 <head>
@@ -33,7 +37,7 @@
 			<?php if ( ! empty( $blog_info ) ) : ?>
 				<h3 class="site-title">
 					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-						<img src="<?php echo get_template_directory_uri(); ?>/mkaz.blog.svg" title="<?php echo esc_attr( $blog_info ); ?>"/>
+						<img src="<?php echo get_template_directory_uri(); ?>/<?php echo $logo; ?>" title="<?php echo esc_attr( $blog_info ); ?>"/>
 					</a>
 				</h3>
 				<p class="site-description">
