@@ -191,6 +191,3 @@ require get_template_directory() . '/inc/class-varia-svg-icons.php';
 require get_template_directory() . '/inc/class-twentynineteen-walker-comment.php';
 require get_template_directory() . '/inc/template-tags.php';
 require get_template_directory() . '/inc/template-functions.php';
-
-
-

@@ -25,13 +25,10 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
   */
 
 :root {
-    --system-font: -apple-system, BlinkMacSystemFont, Roboto, Oxygen, "Droid Sans", Cantarell, "Fira Sans", "Helvetica Neue", sans-serif;
-	--main-font-family: 'Droid Serif', Cambria, 'Bitstream Charter', 'Big Caslon', serif;
+    --system-font: system-ui, -apple-system, "Segoe UI", Roboto, Ubuntu, Cantarell, "Noto Sans", sans-serif, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     --code-font-family: Hack, SFMono-Regular, Consolas, "Liberation Mono", Menlo, Inconsolata, "Courier New", monospace;
     --code-font-size: 0.8889rem;
-	--font-mono: Consolas, Menlo, Inconsolata, 'Droid Sans Mono', SFMono-Regular, 'Courier New', monospace;
-
-    --header-font-family: 'Droid Serif', Cambria, 'Bitstream Charter', 'Big Caslon', serif;
+	
     --blockquote-font-family: 'Droid Serif', Cambria, 'Bitstream Charter', 'Big Caslon', serif;
 
     --h1-size: 1.5555rem;
@@ -54,8 +51,8 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 html {
 	-webkit-text-size-adjust: 100%;
 	box-sizing: border-box;
-	font-family: var(--main-font-family);
-	font-size: 20px;
+	font-family: var(--system-font);
+	font-size: 18px;
 	line-height: 1.5;
 	padding: 0;
 	margin: 0;
@@ -74,8 +71,7 @@ body {
 	margin: 0;
 	-moz-osx-font-smoothing: grayscale;
 	-webkit-font-smoothing: antialiased;
-	background-color: var(--color-site);
-	/* background-color: #d2e1ee; */
+	background-color: #FFFFFF;
 }
 
 @media only screen and (max-width: 560px) {
@@ -656,7 +652,7 @@ h3, h3 a,
 h4, h4 a,
 h5, h5 a,
 h6, h6 a {
-	font-family: var(--header-font-family);
+	font-family: var(--system-font);
 	font-weight: 700;
 	color: var(--color-main);
 	clear: both;
@@ -718,7 +714,7 @@ img {
 
 ul,
 ol {
-	font-family: var(--main-font-family);
+	font-family: var(--system-font);
 	margin: 0 0 0 16px;
 	padding: 0;
 }
@@ -1058,8 +1054,7 @@ ul.post-list {
 /* Home */
 span.posted-on {
 	color: #666666;
-	font-size: 0.8888rem;
-	font-family: var(--font-mono);
+	font-family: var(--system-font);
 	margin-right: 0.5rem
 }
 
@@ -1101,7 +1096,7 @@ span.posted-on {
 }
 
 .footer-navigation .footer-menu a {
-	font-family: var(--main-font-family);
+	font-family: var(--system-font);
 	font-size: 0.8333rem;
 	font-weight: normal;
 	padding: 16px;
@@ -1220,9 +1215,10 @@ span.posted-on {
 }
 
 .post-navigation .post-title {
-	font-family: var(--header-font-family);
+	font-family: var(--system-font);
 	font-size: 1.2rem;
 	font-weight: 500;
+	line-height: 1.0;
 }
 
 .post-navigation .nav-links a {
@@ -1367,7 +1363,7 @@ article {
 	flex-direction: column;
 	justify-content: flex-start;
 	border-bottom: 1px solid #CCCCCC;
-	padding-bottom: 16px;
+	padding-bottom: 32px;
 	margin-bottom: 32px;
 }
 

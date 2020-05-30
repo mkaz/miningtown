@@ -6,13 +6,11 @@
    * so copied and pasted style.css
    */
    :root {
-	--system-font: -apple-system, BlinkMacSystemFont, Roboto, Oxygen, "Droid Sans", Ubuntu, Cantarell, "Fira Sans", "Helvetica Neue", sans-serif;
-	--main-font-family: 'Droid Serif', Cambria, 'Bitstream Charter', 'Big Caslon', serif;
-    --main-font-size: 18px;
+	--system-font: system-ui, -apple-system, "Segoe UI", Roboto, Ubuntu, Cantarell, "Noto Sans", sans-serif, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+
     --code-font-family: SFMono-Regular, Consolas, "Liberation Mono", Menlo, Inconsolata, "Courier New", monospace;
     --code-font-size: 0.8889rem;
 
-    --header-font-family: 'Droid Serif', Cambria, 'Bitstream Charter', 'Big Caslon', serif;
     --blockquote-font-family: 'Droid Serif', Cambria, 'Bitstream Charter', 'Big Caslon', serif;
 
     --h1-size: 1.7778rem;
@@ -34,8 +32,8 @@
 body {
 	color: #333333;
 	background-color: white;
-	font-family: var(--main-font-family);
-	font-size: var(--main-font-size);
+	font-family: var(--system-font);
+	font-size: 18px;
 	font-weight: normal;
 	line-height: 1.5;
 	-moz-osx-font-smoothing: grayscale;
@@ -415,7 +413,7 @@ table th,
  */
 .editor-post-title__block .editor-post-title__input {
 	color: #333333;
-	font-family: var(--header-font-family);
+	font-family: var(--system-font);
 	font-weight: 700;
 	font-size: var(--h1-size);
 	letter-spacing: normal;
