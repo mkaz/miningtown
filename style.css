@@ -1052,6 +1052,23 @@ ul.post-list {
 	padding-left: 0;
 }
 /* Home */
+
+.filter-list {
+	border-top: 1px solid #CCC;
+	border-bottom: 1px solid #CCC;
+	padding: 4px 0;
+	margin-top: -16px;
+	margin-bottom: 16px;
+	font-size: 0.8rem;
+}
+.filter-list span {
+	margin: 0 0.5rem;
+}
+
+.filter-list span.selected {
+	font-weight: bold;
+}
+
 span.posted-on {
 	color: #666666;
 	font-family: var(--system-font);

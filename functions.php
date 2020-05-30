@@ -150,6 +150,13 @@ add_action( 'init', function() {
     ] );
 } );
 
+// need to add filter for homepage
+add_filter( 'query_vars', function( $vars ) {
+	$vars[] = "filter";
+	return $vars;
+} );
+
+
 add_action( 'widgets_init', function() {
 	register_sidebar( array(
 		'name'          => 'Footer Left',
