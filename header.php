@@ -11,9 +11,6 @@
  * @since 1.0.0
  */
 
- // switch logo for pride month
-$logo = ( date("n") === "6" ) ? "mkaz.blog-pride.svg" : "mkaz.blog.svg";
-
 ?><!doctype html>
 <html <?php language_attributes(); ?>>
 <head>
@@ -28,23 +25,14 @@ $logo = ( date("n") === "6" ) ? "mkaz.blog-pride.svg" : "mkaz.blog.svg";
 	<a class="skip-link screen-reader-text" href="#content">Skip to content</a>
 
 	<header id="masthead" class="site-header">
-
-		<div class="site-branding">
-			<?php if ( has_custom_logo() ) : ?>
-				<div class="site-logo"><?php the_custom_logo(); ?></div>
-			<?php endif; ?>
-			<?php $blog_info = get_bloginfo( 'name' ); ?>
-			<?php if ( ! empty( $blog_info ) ) : ?>
-				<h3 class="site-title">
-					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-						<img src="<?php echo get_template_directory_uri(); ?>/<?php echo $logo; ?>" title="<?php echo esc_attr( $blog_info ); ?>"/>
-					</a>
-				</h3>
-				<p class="site-description">
-					<?php esc_html( bloginfo( 'description' ) ); ?>
-				</p>
-			<?php endif; ?>
-		</div>
+		<?php $blog_info = get_bloginfo( 'name' ); ?>
+		<?php if ( ! empty( $blog_info ) ) : ?>
+			<h3 class="site-title">
+				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+					<?php echo esc_html( $blog_info ); ?>
+				</a>
+			</h3>
+		<?php endif; ?>
 
 		<?php if ( has_nav_menu('header-menu') ) : ?>
 			<nav class="main-navigation" aria-label="Main Navigation">

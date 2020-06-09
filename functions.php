@@ -132,8 +132,12 @@ add_action( 'wp_enqueue_scripts', function() {
 			filemtime( get_stylesheet_directory() . '/tut/asciinema/asciinema-player.js' ),
 			true // in footer
 		);
-
 	}
+
+	wp_enqueue_style(
+		'miningtown-font-style',
+		'https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&display=swap'
+	);
 
 	wp_enqueue_style(
 		'miningtown-style',
