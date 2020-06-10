@@ -1013,6 +1013,13 @@ ul.post-list {
 	margin-left: 0;
 	padding-left: 0;
 }
+
+li.entry-title {
+	margin-bottom: 4px;
+	padding-bottom: 4px;
+	border-bottom: 1px dotted #999999;
+}
+
 /* Home */
 
 .filter-list {
@@ -1022,6 +1029,7 @@ ul.post-list {
 	margin-top: -16px;
 	margin-bottom: 16px;
 	font-size: 0.8rem;
+	font-family: var(--system-font);
 }
 .filter-list span {
 	margin: 0 0.5rem;
@@ -1032,9 +1040,10 @@ ul.post-list {
 }
 
 span.posted-on {
-	color: #666666;
-	font-family: var(--system-font);
-	margin-right: 0.5rem
+	color: #999999;
+	display: inline-block;
+	margin: 0;
+	font-size: 0.8rem;
 }
 
 .footer-navigation {
@@ -1195,8 +1204,7 @@ span.posted-on {
 
 .post-navigation .post-title {
 	font-family: var(--system-font);
-	font-size: 1.2rem;
-	font-weight: 500;
+	font-size: 1.0rem;
 	line-height: 1.0;
 }
 

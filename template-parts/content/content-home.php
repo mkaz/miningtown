@@ -12,16 +12,16 @@
 ?>
 
 <li class="entry-title">
+	<?php
+		the_title( sprintf( '<a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a>' );
+	?>
 	<span class="posted-on">
 	<?php
 		printf(
 			'<time class="entry-date published" datetime="%1$s">%2$s</time>',
 			esc_attr( get_the_date( DATE_W3C ) ),
-			esc_html( get_the_date( "Y-m-d") )
+			esc_html( get_the_date( "M Y") )
 		);
 	?>
 	</span>
-	<?php
-		the_title( sprintf( '<a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a>' );
-	?>
 </li>
