@@ -13,6 +13,6 @@ jobs:
       uses: SamKirkland/FTP-Deploy-Action@3.0.0
       with:
         ftp-server: sftp://sftp.pressable.com/
-        ftp-username: ${{ secrets.SFTP_USERNAME }}
-        ftp-password: ${{ secrets.SFTP_PASSWORD }}
-        git-ftp-args: --remote-root wp-content/themes/miningtown/
+        ftp-username: ${{ secrets.USERNAME }}
+        ftp-password: ${{ secrets.PASSWORD }}
+        git-ftp-args: --remote-root htdocs/wp-content/themes/miningtown/ --insecure
