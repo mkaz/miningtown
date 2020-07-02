@@ -701,7 +701,6 @@ img {
 
 ul,
 ol {
-	font-family: var(--system-font);
 	margin: 0 0 0 16px;
 	padding: 0;
 }
